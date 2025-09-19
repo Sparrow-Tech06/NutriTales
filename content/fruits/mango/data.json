@@ -1,1 +1,13 @@
 
+{
+  "meta": {"slug":"mango","category":"fruits","availableLangs":["en","bn"]},
+  "name": {"en":"Mango","bn":"আম"},
+  "story": {
+    "en": "Hi! I am Mango 🥭 — the king of fruits in many places. Sweet and golden, I bring joy and I am packed with vitamin A, vitamin C and antioxidants. I support eyesight and give a tasty energy boost.",
+    "bn": "হাই! আমি আম 🥭 — অনেক জায়গায় ফলের রাজা। মিষ্টি ও পসরা, আমি ভিটামিন এ, সি ও অ্যান্টিঅক্সিডেন্টে ভরপুর।"
+  },
+  "benefits": {
+    "en": ["Rich in vitamin A & C", "Antioxidant properties", "Good energy source"],
+    "bn": ["ভিটামিন এ ও সি সমৃদ্ধ", "অ্যান্টিঅক্সিডেন্ট আছে", "শক্তির ভাল উৎস"]
+  }
+}
