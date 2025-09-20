@@ -1,93 +1,89 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Apple — NutriTales</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lion</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
-  <link rel="stylesheet" href="../../assets/css/styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body { background: #fff7ee; }
+    .animal-card {
+      max-width: 660px;
+      margin: auto;
+      border-radius: 20px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    .animal-header {
+      background: #f39c12;
+      color: #fff;
+      padding: 15px;
+      position: relative;
+    }
+    .animal-header img {
+      width: 150px;
+      height: auto;
+      display: block;
+      margin: 10px auto;
+    }
+    .back-btn {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      color: #fff;
+      font-size: 1.5rem;
+      text-decoration: none;
+    }
+    .floating-btn {
+      background: #f39c12;
+      border-radius: 12px;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-size: 1.4rem;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+    }
+  </style>
 </head>
 <body>
-  <main class="container page-frame py-4">
-    <nav class="d-flex justify-content-between align-items-center mb-3">
-      <a href="../../category.html?cat=fruits" class="text-decoration-none"><i class="bi bi-arrow-left"></i> Back</a>
-      <div>
-        <select id="langSelect" class="form-select lang-select"></select>
+
+  <div class="animal-card">
+    <!-- Sticky Header -->
+    <div class="animal-header sticky-top">
+      <a href="../index.html" class="back-btn"><i class="bi bi-arrow-left"></i></a>
+      <div class="d-flex justify-content-end">
+        <!-- Language Switcher -->
+        <select id="langSwitcher" class="form-select form-select-sm w-auto">
+          <option value="eng">English</option>
+          <option value="hin">हिंदी</option>
+          <option value="ban">বাংলা</option>
+        </select>
       </div>
-    </nav>
+      <img id="animalImage" src="" alt="Animal">
+    </div>
 
-    <article class="story-card">
-      <div class="story-hero mb-3">
-        <img id="heroImg" src="img.jpg" alt="Apple" loading="lazy">
-      </div>
+    <!-- Body -->
+    <div class="animal-body p-3">
+      <h3 id="animalName"></h3>
+      <p id="animalDesc"></p>
+      <p><strong>Lifespan:</strong> <span id="animalLife"></span></p>
+      <p><strong>Speed:</strong> <span id="animalSpeed"></span></p>
+    </div>
+  </div>
 
-      <section class="story-content bg-white rounded shadow-sm">
-        <header class="mb-2 px-3 pt-3 d-flex justify-content-between align-items-start">
-          <div>
-            <h1 id="itemName" class="h4 mb-1">Apple</h1>
-            <div id="shortDesc" class="text-muted-small">A friendly fruit with health stories.</div>
-          </div>
-          <div class="text-end text-muted-small">🍎</div>
-        </header>
+  <!-- Floating Button -->
+  <div class="floating-btn">
+    <i class="bi bi-cpu"></i>
+  </div>
 
-        <div class="px-3 pb-3 story-text fade-in" id="storyText">
-          <!-- story injected here -->
-        </div>
-
-        <hr>
-
-        <div class="px-3 pb-3">
-          <h5>Benefits</h5>
-          <ul id="benefitsList" class="mb-0"></ul>
-        </div>
-      </section>
-    </article>
-
-    <footer class="mt-4 text-center small text-muted">NutriTales — Prototype</footer>
-  </main>
-
-  <script src="../../assets/js/app.js"></script>
-  <script>
-    (async function(){
-      const DATA_URL = 'data.json';
-      const data = await loadJSON(DATA_URL);
-      if(!data) {
-        document.getElementById('storyText').innerHTML = '<p class="text-danger">Failed to load content.</p>';
-        return;
-      }
-
-      // Populate language select
-      const langs = data.meta.availableLangs || Object.keys(data.story);
-      const langSelect = document.getElementById('langSelect');
-      langs.forEach(code => {
-        const opt = document.createElement('option'); opt.value=code; opt.textContent = code.toUpperCase();
-        langSelect.appendChild(opt);
-      });
-
-      // Set default language: browser language match else 'en'
-      const browserLang = (navigator.language || 'en').slice(0,2);
-      const defaultLang = langs.includes(browserLang) ? browserLang : (langs.includes('en') ? 'en' : langs[0]);
-      langSelect.value = defaultLang;
-
-      const nameEl = document.getElementById('itemName');
-      const storyEl = document.getElementById('storyText');
-      const benefitsEl = document.getElementById('benefitsList');
-
-      function render(lang){
-        nameEl.textContent = data.name[lang] || data.name['en'] || '';
-        storyEl.innerHTML = '<p>' + (data.story[lang] || data.story['en'] || '') + '</p>';
-        benefitsEl.innerHTML = '';
-        const benefits = data.benefits[lang] || data.benefits['en'] || [];
-        benefits.forEach(b => { const li = document.createElement('li'); li.textContent = b; benefitsEl.appendChild(li); });
-      }
-
-      langSelect.addEventListener('change', ()=> render(langSelect.value));
-      render(defaultLang);
-
-      // safe image fallback
-      safeImg(document.getElementById('heroImg'));
-    })();
-  </script>
+  <!-- Only one JS for all pages -->
+  <script src="../app.js"></script>
 </body>
 </html>
+
