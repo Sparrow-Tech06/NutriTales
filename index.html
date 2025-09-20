@@ -3,9 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   <title>NutriTales - Home</title>
+  
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
   <style>
     :root {
       --primary-color: #4CAF50;
@@ -15,7 +18,7 @@
       --max-width: 660px;
     }
     body {
-      background: #f9f9f9;
+      background: #ffffff ;
       font-family: 'Poppins', sans-serif;
       color: var(--text-color);
     }
@@ -74,10 +77,33 @@
   <div class="container-custom">
     <!-- Header -->
     <header>
-      <img src="assets/logo.svg" alt="NutriTales Logo">
-      <h1 class="h4 mt-2">NutriTales</h1>
-      <p class="mb-0">Discover the healthy stories of nature 🍎🥦🌿</p>
+        <!-- Left Menu Button -->
+        <button class="btn p-0 border-0 bg-transparent" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu">
+           <i class="bi bi-list" style="font-size: 28px; color: orange;"></i>
+       </button>
+
+        <!-- Title -->
+        <div class="header-title">Learn</div>
+
+        <!-- Right Icon -->
+        <img src="https://img.icons8.com/emoji/48/monkey.png" alt="icon" class="icon-right">
     </header>
+
+  <!-- Offcanvas Sidebar -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title">Menu</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="list-unstyled">
+        <li><a href="#" class="d-block py-2">Home</a></li>
+        <li><a href="#" class="d-block py-2">Courses</a></li>
+        <li><a href="#" class="d-block py-2">Profile</a></li>
+        <li><a href="#" class="d-block py-2">Settings</a></li>
+      </ul>
+    </div>
+  
 
     <!-- Categories -->
     <main class="mt-4">
