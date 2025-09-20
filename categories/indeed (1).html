@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fruit Subcategories</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <style>
+    body {
+      background: #f9f9f9;
+    }
+    .card {
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+      margin-bottom: 15px;
+      overflow: hidden;
+      padding: 12px;
+      transition: background-color 0.3s ease;
+    }
+    .skeleton {
+      width: 100px;
+      height: 100px;
+      border-radius: 12px;
+      background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 37%, #e0e0e0 63%);
+      background-size: 400% 100%;
+      animation: shimmer 1.4s ease infinite;
+    }
+    @keyframes shimmer {
+      0% { background-position: -400px 0; }
+      100% { background-position: 400px 0; }
+    }
+    .fruit-img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 12px;
+      display: none;
+    }
+    .explore-btn {
+      border-radius: 20px;
+      font-size: 13px;
+      padding: 4px 12px;
+    }
+    /* Custom button colors */
+    .btn-apple { background-color: #e74c3c; border-color: #e74c3c; color: white; }
+    .btn-mango { background-color: #f39c12; border-color: #f39c12; color: white; }
+    .btn-banana { background-color: #f1c40f; border-color: #f1c40f; color: white; }
+    .btn-grapes { background-color: #8e44ad; border-color: #8e44ad; color: white; }
+    /* Custom card background colors */
+    .card-apple { background-color: #fff0f0; }
+    .card-mango { background-color: #fff8eb; }
+    .card-banana { background-color: #fffbeb; }
+    .card-grapes { background-color: #f6f0ff; }
+  </style>
+</head>
+<body>
+
+<main class="container py-3" style="max-width:660px;">
+
+  <header class="text-center mb-4">
+    <h1>Fruit Categories</h1>
+  </header>
+
+  <section class="mb-4">
+    <div class="input-group">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" id="searchInput" class="form-control" placeholder="Search for a fruit...">
+    </div>
+  </section>
+
+  <section id="fruitList">
+    <article class="card card-apple d-flex align-items-center" data-fruit="apple">
+      <div class="d-flex align-items-center w-100">
+        <div class="me-3">
+          <div class="skeleton"></div>
+          <img src="https://picsum.photos/100/100?random=1" class="fruit-img" onload="showImage(this)">
+        </div>
+        <div class="flex-grow-1">
+          <hgroup>
+            <h6 class="mb-1">Apple</h6>
+            <p class="text-muted small mb-2">Sweet and crunchy red fruit.</p>
+          </hgroup>
+          <a href="apple/story.html" class="btn explore-btn btn-apple">Explore Now</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card card-mango d-flex align-items-center" data-fruit="mango">
+      <div class="d-flex align-items-center w-100">
+        <div class="me-3">
+          <div class="skeleton"></div>
+          <img src="https://picsum.photos/100/100?random=2" class="fruit-img" onload="showImage(this)">
+        </div>
+        <div class="flex-grow-1">
+          <hgroup>
+            <h6 class="mb-1">Mango</h6>
+            <p class="text-muted small mb-2">King of fruits, juicy and tasty.</p>
+          </hgroup>
+          <a href="mango.html" class="btn explore-btn btn-mango">Explore Now</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card card-banana d-flex align-items-center" data-fruit="banana">
+      <div class="d-flex align-items-center w-100">
+        <div class="me-3">
+          <div class="skeleton"></div>
+          <img src="https://picsum.photos/100/100?random=3" class="fruit-img" onload="showImage(this)">
+        </div>
+        <div class="flex-grow-1">
+          <hgroup>
+            <h6 class="mb-1">Banana</h6>
+            <p class="text-muted small mb-2">Soft, sweet and full of energy.</p>
+          </hgroup>
+          <a href="banana.html" class="btn explore-btn btn-banana">Explore Now</a>
+        </div>
+      </div>
+    </article>
+
+    <article class="card card-grapes d-flex align-items-center" data-fruit="grapes">
+      <div class="d-flex align-items-center w-100">
+        <div class="me-3">
+          <div class="skeleton"></div>
+          <img src="https://picsum.photos/100/100?random=4" class="fruit-img" onload="showImage(this)">
+        </div>
+        <div class="flex-grow-1">
+          <hgroup>
+            <h6 class="mb-1">Grapes</h6>
+            <p class="text-muted small mb-2">Tiny juicy fruits in bunches.</p>
+          </hgroup>
+          <a href="grapes.html" class="btn explore-btn btn-grapes">Explore Now</a>
+        </div>
+      </div>
+    </article>
+  </section>
+</main>
+
+<script>
+  function showImage(img) {
+    const skeleton = img.previousElementSibling;
+    if (skeleton) {
+      skeleton.style.display = "none";  // Hide skeleton
+    }
+    img.style.display = "block";      // Show image
+  }
+
+  // Real-time search filter
+  document.getElementById('searchInput').addEventListener('keyup', function() {
+    const filter = this.value.toLowerCase();
+    const fruitCards = document.querySelectorAll('#fruitList .card');
+    
+    fruitCards.forEach(card => {
+      const fruitName = card.getAttribute('data-fruit');
+      if (fruitName.includes(filter)) {
+        card.style.display = 'flex'; // Show card
+      } else {
+        card.style.display = 'none'; // Hide card
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
