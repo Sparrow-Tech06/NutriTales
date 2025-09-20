@@ -1,1 +1,47 @@
 
+    body {
+      background: #f9f9f9;
+    }
+    .card {
+      border: none;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+      margin-bottom: 15px;
+      overflow: hidden;
+      padding: 12px;
+      transition: background-color 0.3s ease;
+    }
+    .skeleton {
+      width: 100px;
+      height: 100px;
+      border-radius: 12px;
+      background: linear-gradient(90deg, #e0e0e0 25%, #f0f0f0 37%, #e0e0e0 63%);
+      background-size: 400% 100%;
+      animation: shimmer 1.4s ease infinite;
+    }
+    @keyframes shimmer {
+      0% { background-position: -400px 0; }
+      100% { background-position: 400px 0; }
+    }
+    .fruit-img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 12px;
+      display: none;
+    }
+    .explore-btn {
+      border-radius: 20px;
+      font-size: 13px;
+      padding: 4px 12px;
+    }
+    /* Custom button colors */
+    .btn-apple { background-color: #e74c3c; border-color: #e74c3c; color: white; }
+    .btn-mango { background-color: #f39c12; border-color: #f39c12; color: white; }
+    .btn-banana { background-color: #f1c40f; border-color: #f1c40f; color: white; }
+    .btn-grapes { background-color: #8e44ad; border-color: #8e44ad; color: white; }
+    /* Custom card background colors */
+    .card-apple { background-color: #fff0f0; }
+    .card-mango { background-color: #fff8eb; }
+    .card-banana { background-color: #fffbeb; }
+    .card-grapes { background-color: #f6f0ff; }
