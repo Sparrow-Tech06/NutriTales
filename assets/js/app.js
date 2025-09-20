@@ -6,12 +6,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const animalSpeed = document.getElementById("animalSpeed");
   const animalImage = document.getElementById("animalImage");
 
-  // Detect current folder name (lion.html → folder = lion)
+  // Detect current folder name (like /lion/story.html → "lion")
   const pathParts = location.pathname.split("/");
-  const folder = pathParts[pathParts.length - 2]; // "lion"
-  const jsonFile = `${folder}.json`; // "lion.json"
+  const folder = pathParts[pathParts.length - 2]; // folder name
 
-  fetch(`${folder}/${jsonFile}`)
+  fetch(`${folder}/data.json`)
     .then(res => res.json())
     .then(animal => {
       let currentLang = langSwitcher.value;
@@ -27,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Default Load
       updateUI(currentLang);
 
-      // Language Switcher Change
+      // On Language Change
       langSwitcher.addEventListener("change", () => {
         updateUI(langSwitcher.value);
       });
