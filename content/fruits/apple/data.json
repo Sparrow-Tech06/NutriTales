@@ -1,21 +1,14 @@
 {
-  "image": "https://cdn-icons-png.flaticon.com/512/616/616408.png",
   "eng": {
-    "name": "Lion",
-    "desc": "The lion is a muscular, deep-chested cat with a short rounded head, a reduced neck, round ears, and a hairy tuft at the end of its tail.",
-    "life": "10 – 14 years",
-    "speed": "Up to 80 km/h"
+    "name": "Cheetah",
+    "desc": "The cheetah is the fastest land animal, capable of running very fast."
   },
   "hin": {
-    "name": "शेर",
-    "desc": "शेर बिल्ली परिवार का एक शक्तिशाली जानवर है, जिसकी छोटी गोल सिर और पूंछ के अंत में बालों का गुच्छा होता है।",
-    "life": "10 – 14 साल",
-    "speed": "80 किमी/घंटा तक"
+    "name": "चीता",
+    "desc": "चीता सबसे तेज़ स्थलीय जानवर है, जो बहुत तेज़ दौड़ सकता है।"
   },
   "ban": {
-    "name": "সিংহ",
-    "desc": "সিংহ হলো ফেলিডি পরিবারের একটি শক্তিশালী বিড়াল, যার ছোট মাথা এবং লেজের শেষে চুলের গোছা থাকে।",
-    "life": "১০ – ১৪ বছর",
-    "speed": "৮০ কিমি/ঘণ্টা পর্যন্ত"
+    "name": "চিতাবাঘ",
+    "desc": "চিতাবাঘ পৃথিবীর দ্রুততম স্থলজ প্রাণী, যা খুব দ্রুত দৌড়াতে পারে।"
   }
 }
