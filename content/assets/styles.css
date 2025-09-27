@@ -13,7 +13,7 @@
        box-sizing: border-box ;
        user-select: none ;
    }
-    body { background: #fff7ee; }
+    body { background: var(--bg-color) ; }
 
 /******************************************************/
     .animal-card {
