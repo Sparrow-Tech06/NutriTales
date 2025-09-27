@@ -1,36 +1,45 @@
-:root{
-  --max-width: 660px;
-  --accent: #4CAF50;
-  --muted: #6c757d;
-  --card-radius: 14px;
-}
 
-*{box-sizing:border-box}
-body{background:#fbfdfb;font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;}
+    body { background: #fff7ee; }
+    .animal-card {
+      max-width: 660px;
+      margin: auto;
+      border-radius: 0px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    .animal-header {
+      background: #f39c12;
+      color: #fff;
+      padding: 15px;
+      position: relative;
+    }
+    .animal-header img {
+      width: 150px;
+      height: auto;
+      display: block;
+      margin: 10px auto;
+    }
+    .back-btn {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      color: #fff;
+      font-size: 1.5rem;
+      text-decoration: none;
+    }
+    .floating-btn {
+      background: #f39c12;
+      border-radius: 12px;
+      width: 50px;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-size: 1.4rem;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+    }
 
-.page-frame{max-width:var(--max-width);}
 
-.category-card, .item-card{border-radius:var(--card-radius);overflow:hidden;transition:transform .18s ease, box-shadow .18s ease;}
-.category-card:hover, .item-card:hover{transform:translateY(-6px);box-shadow:0 10px 30px rgba(0,0,0,.08)}
-
-.category-card .card-body i{width:48px;height:48px;display:flex;align-items:center;justify-content:center;border-radius:10px;background:rgba(76,175,80,.08)}
-
-img{max-width:100%;height:auto;display:block}
-
-/* Story page specific */
-.story-hero{border-radius:12px;overflow:hidden;box-shadow:0 8px 20px rgba(0,0,0,.06)}
-.story-content{padding:1rem}
-.story-text p{line-height:1.65;font-size:1.05rem;margin-bottom:1rem}
-
-.lang-select{min-width:120px}
-
-/* small helpers */
-.text-muted-small{color:var(--muted);font-size:.9rem}
-
-/* skeleton image */
-.skeleton{background:linear-gradient(90deg,#eee,#f6f6f6,#eee);background-size:200% 100%;animation:shine 1.2s infinite}
-@keyframes shine{to{background-position:-200% 0}}
-
-/* responsive padding */
-@media (max-width:576px){.page-frame{padding:1rem}}
-@media (min-width:577px){.page-frame{padding:2rem}}
