@@ -72,8 +72,6 @@
     <div class="animal-body p-3">
       <h3 id="animalName"></h3>
       <p id="animalDesc"></p>
-      <p><strong>Lifespan:</strong> <span id="animalLife"></span></p>
-      <p><strong>Speed:</strong> <span id="animalSpeed"></span></p>
     </div>
   </div>
 
@@ -83,6 +81,35 @@
   </a>
 
   <!-- Common JS -->
-  <script src="../../assets/app.js"></script>
+  <script>
+      document.addEventListener("DOMContentLoaded", () => {
+  const langSwitcher = document.getElementById("langSwitcher");
+  const animalName = document.getElementById("animalName");
+  const animalDesc = document.getElementById("animalDesc");
+
+  let data = {};
+
+  // JSON fetch
+  fetch("data.json")
+    .then(res => res.json())
+    .then(json => {
+      data = json;
+      loadAnimal("eng"); // Default English
+    })
+    .catch(err => console.error("Error loading JSON:", err));
+
+  // Language switcher event
+  langSwitcher.addEventListener("change", (e) => {
+    loadAnimal(e.target.value);
+  });
+
+  function loadAnimal(lang) {
+    if (!data[lang]) return;
+    animalName.textContent = data[lang].name;
+    animalDesc.textContent = data[lang].desc;
+  }
+});
+
+  </script>
 </body>
 </html>
