@@ -1,5 +1,7 @@
 :root {
     --bg-color: #ffffff ;
+    --header: #f39c12 ;
+    --text: #fff ;
  }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -24,8 +26,8 @@
       overflow: hidden;
     }
     .animal-header {
-      background: #f39c12;
-      color: #fff;
+      background: var(--header);
+      color: var(--text);
       padding: 15px;
       position: relative;
     }
