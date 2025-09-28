@@ -38,6 +38,7 @@
     <div class="animal-body p-3">
       <h3 id="animalName"></h3>
       <p id="animalDesc"></p>
+      <p id="animalFact"></p>
     </div>
   </div>
 
@@ -52,6 +53,7 @@
   const langSwitcher = document.getElementById("langSwitcher");
   const animalName = document.getElementById("animalName");
   const animalDesc = document.getElementById("animalDesc");
+  const animalFact = document.getElementById("animalFact");
 
   let data = {};
 
@@ -73,6 +75,7 @@
     if (!data[lang]) return;
     animalName.textContent = data[lang].name;
     animalDesc.textContent = data[lang].desc;
+    animalFact.textContent = data[lang].fact;
   }
 });
 
