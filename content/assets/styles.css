@@ -22,20 +22,33 @@
       max-width: 660px;
       margin: auto;
       border-radius: 0px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      overflow: hidden;
+    /*  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      overflow: hidden; */
     }
     .animal-header {
       background: var(--header);
       color: var(--text);
-      padding: 15px;
+      padding:1rem 1.5rem 1rem;
       position: relative;
     }
-    .animal-header img {
+   /* .animal-header img {
       width: 150px;
       height: auto;
       display: block;
       margin: 10px auto;
+    } */
+   .hero-figure{
+      width:120px;
+      height:120px;
+      border-radius:50%;
+      background:#fff;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:4rem;
+      color:var(--primary);
+      margin:1rem auto;
+      box-shadow:0 8px 18px rgba(0,0,0,0.15);
     }
 /***************************************************/
     .back-btn {
