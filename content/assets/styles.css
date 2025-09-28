@@ -2,6 +2,7 @@
     --bg-color: #fafafa ;
     --header: #2ecc71; ;
     --text: #fff ;
+    --primary:#2ecc71; /* fresh green */
     --accent:#FF6B6B; /* f39c12 */
  }
 @media (prefers-color-scheme: dark) {
@@ -87,12 +88,13 @@
     }
 /*****************************************************/
  .animalName {
+     color:var(--primary);
      font-weight:800;
      font-size:2rem;
      letter-spacing:-.3px;
  }
 .animalDesc {
      font-size:.9rem;
-    color:rgba(255,255,255,0.9);
+     color:rgba(255,255,255,0.9);
 }
 
