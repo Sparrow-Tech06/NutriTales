@@ -5,6 +5,7 @@
     --primary: #444 ;
     --accent: #FF6B6B ; /* f39c12 */
     --fact: #f8f9fa ;
+    --hero-figure: #ffffff ;
  }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -45,7 +46,7 @@
       width:120px;
       height:120px;
       border-radius:50%;
-      background:#fff;
+      background: var(--hero-figure);
       display:flex;
       align-items:center;
       justify-content:center;
@@ -99,12 +100,11 @@
      color: var(--text) ;
 }
 #animalFact {
-     flex:1;padding:.75rem;
+     flex:1;padding: 10px 0px ;
      font-size: 8rem;
      border-radius: var(--radius) ;
      background: var(--fact) ;
      color: var(--text) ;
-     box-shadow:inset 0 0 6px rgba(0,0,0,0.02);
 }
 /************************************************/
 #langSwitcher {  
