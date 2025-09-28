@@ -6,6 +6,8 @@
     body {
       background: linear-gradient(180deg, var(--bg) 0%, #f6fdf9 100%);
       font-family: 'Nunito', sans-serif;
+      background-repeat: no-repeat;
+      min-height: 100vh;
     }
 /*********************************************/
     .card {
