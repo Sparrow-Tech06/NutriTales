@@ -92,7 +92,7 @@
 /*****************************************************/
  #animalName {
      color:var(--primary);
-     font-weight:800;
+     font-weight: 600 ;
      font-size: 1.50rem;
      letter-spacing:-.3px;
  }
