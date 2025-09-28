@@ -18,9 +18,12 @@
        padding: 0 ;
        box-sizing: border-box ;
        user-select: none ;
-       font-family: "Open Sans", sans-serif;
+       font-family: 'Nunito', sans-serif;
    }
-    body { background: var(--bg-color) ; }
+    body { 
+        background: var(--bg-color) ; 
+        font-family: 'Nunito', sans-serif;
+      }
 
 /******************************************************/
     .animal-card {
