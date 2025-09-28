@@ -1,7 +1,11 @@
-
+:root {
+    --primary:#2ecc71;
+}
+ /************************************/
     body {
-      background: #4CAF50 ;
+      background:var(--primary) ;
     }
+/*********************************************/
     .card {
       border: none;
       border-radius: 15px;
@@ -12,8 +16,8 @@
       transition: background-color 0.3s ease;
     }
     .skeleton {
-      width: 100px;
-      height: 100px;
+      width: 90px;
+      height: 90px;
       border-radius: 12px;
       background: linear-gradient(135deg, #e0e0e0 25%, #f0f0f0 37%, #e0e0e0 63%);
       background-size: 400% 100%;
@@ -35,13 +39,4 @@
       font-size: 13px;
       padding: 4px 12px;
     }
-    /* Custom button colors */
-    .btn-apple { background-color: #e74c3c; border-color: #e74c3c; color: white; }
-    .btn-mango { background-color: #f39c12; border-color: #f39c12; color: white; }
-    .btn-banana { background-color: #f1c40f; border-color: #f1c40f; color: white; }
-    .btn-grapes { background-color: #8e44ad; border-color: #8e44ad; color: white; }
-    /* Custom card background colors */
-    .card-apple { background-color: #fff0f0; }
-    .card-mango { background-color: #fff8eb; }
-    .card-banana { background-color: #fffbeb; }
-    .card-grapes { background-color: #f6f0ff; }
+    
