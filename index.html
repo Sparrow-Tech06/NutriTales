@@ -5,170 +5,204 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no,viewport-fit=cover">  
   
   <title>NutriTales - Home</title>
-  
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-  
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
   
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
   <style>
-    :root {
-      --primary-color: #2ecc71 ;
-      --secondary-color: #FFB300;
-      --accent-color: #E53935;
-      --text-color: #fff ;
-      --max-width: 660px;
-    }
-    body {
-      background: var(--primary-color) ;
+    :root{
+      --bg: #eafaf1;
+      --card: #ffffff;
+      --accent: #2ecc71;
+      --soft-shadow: 0 10px 18px rgba(11,40,60,0.06);
+      --deep-shadow: 0 18px 28px rgba(11,40,60,0.08);
+      --radius: 20px;
       font-family: 'Nunito', sans-serif;
-      color: var(--text-color);
     }
-    .container-custom {
-      max-width: var(--max-width);
-      margin: auto;
-      padding: 0px;
+
+    body{
+      margin:0;
+      background: linear-gradient(180deg, var(--bg) 0%, #f6fdf9 100%);
+      min-height:100vh;
+      font-family: 'Nunito', sans-serif;
     }
-   header {
-      max-width: 660px;
-      background: var(--primary-color);
-      padding: 10px 15px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      box-shadow: 0 3px 10px rgba(0,0,0,0.05);
-      position: sticky;
-      top: 0 ;
-      z-index: 1020;
-      color: var(--text-color) ;
+
+    header.header{
+      background: var(--accent);
+      padding: 0 20px;
+      position: relative;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      height: 160px;
     }
-    .header-title {
-      font-size: 22px;
-      font-weight: bold;
-      color: var(--text-color);
-    }
-  .notification-icon {
+
+    .notification-icon {
       background: rgba(255, 255, 255, 0.3);
       padding: 6px 8px;
       border-radius: 6px;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #fff ;
-    }
-    .category-card {
-      background: white;
-      border-radius: 16px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      padding: 25px 15px;
-      text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-      text-decoration: none; /* Remove underline from links */
-      display: block; /* Make the entire card clickable */
-      color: inherit; /* Inherit color from parent */
-    }
-    .category-icon {
-      font-size: 2.5rem;
-      color: var(--primary-color);
-      margin-bottom: 10px;
+      color: #fff;
     }
 
-    /* Animation */
-    .fade-in {
-      animation: fadeIn 1s ease forwards;
-      opacity: 0;
+    .promo{
+      position:absolute;
+      left:20px;right:20px;
+      transform:translateY(30px);
+      background:var(--card);
+      border-radius:16px;
+      padding:16px;
+      box-shadow:var(--deep-shadow);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:10px;
+      max-width: 660px;
+      margin: 0 auto;
+      min-height: 120px ;
     }
-    @keyframes fadeIn {
-      to { opacity: 1; }
+    .promo h3{margin:0;font-size:16px;color:#222;font-weight:700}
+    .promo p{margin:6px 0 0 0;color:#768992;font-size:13px}
+    .promo .cta{
+        display:inline-block;
+        margin-top:10px;padding:8px 12px;
+        border-radius:12px;
+        background:#ecfdf3;
+        border:1px solid #c7f9db;
+        font-weight:600;
+        color:var(--accent);
+        font-size:13px; 
+     }
+
+    main{max-width:660px;margin:80px auto;padding:10px 20px 40px;}
+    .section-title{font-weight:700;color:#234;font-size:18px}
+
+    .grid{margin-top:18px;display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+    .tile{background:var(--card);border-radius:16px;padding:18px;display:flex;flex-direction:column;align-items:center;gap:12px;box-shadow:var(--soft-shadow);min-height:130px;justify-content:center;text-align:center}
+    .tile img{width:70px;height:70px;object-fit:contain;background:#e9fdf1;border-radius:50%;padding:10px}
+    .tile-label{
+       font-weight:600;
+       color:var(--accent);
+       font-size:14px;
+       border-radius:12px;
+       background:#ecfdf3;
+       border:1px solid #c7f9db;
+       display:inline-block;
+       padding:8px 12px;
+       min-width: 60%;
+       text-decoration: none;
     }
-    .main-content {
-      padding: 15px;
+
+    .toggle-btn {
+      font-size: 1.5rem;
     }
-    .offcanvas { max-width: 80%; }
-    .offcanvas-body a {
-        color: #333;
-        transition: color 0.2s;
+
+    ul li a {
+       text-decoration: none;
+       text-align: center ;
+       border-radius:12px;
+       color:var(--accent);
+       font-size:14px;
+       background:#ecfdf3;
+       border:1px solid #c7f9db;
+       margin: 10px auto;
+       display:block;
+       padding:8px 12px;
+       max-width: 80%;
+       transition-duration: 0.3s;
     }
-    .offcanvas-body a:hover {
-        color: var(--primary-color);
-    }
-    .offcanvas-header {
-      background-color: var(--primary-color);
-      color: var(--text-color);
-    }
-    .offcanvas-header .btn-close {
-        filter: invert(1);
+    ul li a:hover { 
+       transform: scale(0.95);
     }
 
   </style>
 </head>
 <body>
-  <div class="container-custom">
-    
-    <header>
-        <button class="btn p-0 border-0 bg-transparent" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu" aria-label="Open Menu">
-           <i class="bi bi-list" style="font-size: 28px; color: orange;"></i>
-       </button>
-        <div class="header-title"> NutriTales </div>
+
+  <header class="header">
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="container d-flex justify-content-between align-items-center">
+        <!-- Left Side -->
+        <div class="d-flex align-items-center">
+          <button class="btn text-white p-0 me-2 toggle-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNav">
+            <i class="bi bi-list"></i>
+          </button>
+          <h1 class="navbar-brand text-white m-0 fs-4">NutriTales</h1>
+        </div>
+
         <!-- Right Side: Notification -->
         <div>
           <a href="notifications/notifications.html" class="notification-icon">
-             <i class="bi bi-bell-fill"></i>
-         </a>
-       </div>
-    </header>
+            <i class="bi bi-bell-fill"></i>
+          </a>
+        </div>
+      </div>
+    </nav>
 
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasMenu" aria-labelledby="offcanvasMenuLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasMenuLabel">Menu</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <!-- Promo Section -->
+    <div class="promo">
+      <div>
+        <h3>Especially For You</h3>
+        <p>New sections and many topics added.</p>
+        <div class="cta">Explore Now</div>
       </div>
-      <div class="offcanvas-body">
-        <nav>
-          <ul class="list-unstyled">
-            <li><a href="#" class="d-block py-2">Home</a></li>
-            <li><a href="#" class="d-block py-2">Courses</a></li>
-            <li><a href="#" class="d-block py-2">Profile</a></li>
-            <li><a href="#" class="d-block py-2">Settings</a></li>
-          </ul>
-        </nav>
-      </div>
+      <img src="https://picsum.photos/60" alt="illus" style="border-radius:12px;">
     </div>
-  
-    <main class="main-content">
-      <section class="row g-3">
-        <div class="col-6 fade-in">
-          <a href="categories/fruits_catalog.html" class="category-card" aria-label="Explore Fruits">
-            <i class="bi bi-apple category-icon"></i>
-            <h2 class="h6 text-dark"> fruits </h2>
-          </a>
-        </div>
-        <div class="col-6 fade-in" style="animation-delay: 0.2s;">
-          <a href="categories/vegetables_catalog.html" class="category-card" aria-label="Explore Vegetables">
-            <i class="bi bi-flower3 category-icon"></i>
-            <h2 class="h6 text-dark">Vegetables</h2>
-          </a>
-        </div>
-        <div class="col-6 fade-in" style="animation-delay: 0.4s;">
-          <a href="categories/herbs_catalog.html" class="category-card" aria-label="Explore Herbs">
-            <i class="bi bi-leaf category-icon"></i>
-            <h2 class="h6 text-dark">Herbs</h2>
-          </a>
-        </div>
-        <div class="col-6 fade-in" style="animation-delay: 0.6s;">
-          <a href="categories/dryfruits_catalog.html" class="category-card" aria-label="Explore Dry Fruits">
-            <i class="bi bi-nut category-icon"></i>
-            <h2 class="h6 text-dark">Dry Fruits</h2>
-          </a>
-        </div>
-      </section>
-    </main>
+  </header>
 
+  <main>
+    <section>
+      <h2 class="section-title">Topics</h2>
+
+      <div class="grid">
+        <article class="tile">
+          <img src="https://img.icons8.com/color/96/apple.png" alt="Fruits" draggable="false">
+          <a href="categories/fruits_catalog.html" class="tile-label"> Fruits </a>
+        </article>
+
+        <article class="tile">
+          <img src="https://img.icons8.com/color/96/broccoli.png" alt="Vegetables" draggable="false">
+          <a href="categories/vegetables_catalog.html" class="tile-label"> Vegetables </a>
+        </article>
+
+        <article class="tile">
+          <img src="https://img.icons8.com/color/96/almonds.png" alt="Dry Fruits" draggable="false">
+          <a href="categories/dryfruits_catalog.html" class="tile-label"> Dry Fruits </a>
+        </article>
+
+        <article class="tile">
+          <img src="https://img.icons8.com/color/96/nuts.png" alt="Herbs" draggable="false">
+          <a href="categories/herbs_catalog.html" class="tile-label"> Herbs </a>
+        </article>
+
+        <article class="tile">
+          <img src="https://img.icons8.com/color/96/quiz.png" alt="Quiz" draggable="false">
+          <a href="#" class="tile-label"> Quiz </a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Offcanvas Menu -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNav">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title"> </h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+    </div>
+    <div class="offcanvas-body">
+      <ul class="list-unstyled">
+        <li><a href="#" class="d-block py-2">Home</a></li>
+        <li><a href="#" class="d-block py-2">Categories</a></li>
+        <li><a href="#" class="d-block py-2">Profile</a></li>
+      </ul>
+    </div>
   </div>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
