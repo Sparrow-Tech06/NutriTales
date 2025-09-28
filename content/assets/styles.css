@@ -1,9 +1,10 @@
 :root {
     --bg-color: #fafafa ;
     --header: #2ecc71; ;
-    --text: #fff ;
+    --text: #444 ;
     --primary: #444 ;
     --accent: #FF6B6B ; /* f39c12 */
+    --fact: #;
  }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -95,12 +96,13 @@
  }
 #animalDesc {
      font-size:.9rem;
-     color:rgba(255,255,255,0.9);
+     color: var(--text) ;
 }
 #animalFact {
      flex:1;padding:.75rem;
      border-radius: var(--radius) ;
-     background:#f9f9f9;
+     background: var(--fact) ;
+     color: var(--text) ;
      box-shadow:inset 0 0 6px rgba(0,0,0,0.02);
 }
 /************************************************/
