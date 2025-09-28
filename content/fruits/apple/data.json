@@ -1,14 +1,17 @@
 {
   "eng": {
     "name": "Cheetah",
-    "desc": "The cheetah is the fastest land animal, capable of running very fast."
+    "desc": "The cheetah is the fastest land animal, capable of running very fast.",
+    "fact": "This Is english Fact."
   },
   "hin": {
     "name": "चीता",
-    "desc": "चीता सबसे तेज़ स्थलीय जानवर है, जो बहुत तेज़ दौड़ सकता है।"
+    "desc": "चीता सबसे तेज़ स्थलीय जानवर है, जो बहुत तेज़ दौड़ सकता है।",
+    "fact": "This Is hindi Fact."
   },
   "ban": {
     "name": "চিতাবাঘ",
-    "desc": "চিতাবাঘ পৃথিবীর দ্রুততম স্থলজ প্রাণী, যা খুব দ্রুত দৌড়াতে পারে।"
+    "desc": "চিতাবাঘ পৃথিবীর দ্রুততম স্থলজ প্রাণী, যা খুব দ্রুত দৌড়াতে পারে।",
+    "fact": "This Is bengali Fact."
   }
 }
