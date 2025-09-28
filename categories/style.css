@@ -1,9 +1,10 @@
 :root {
+    --bg: #eafaf1 ;
     --primary:#2ecc71;
 }
  /************************************/
     body {
-      background:var(--primary) ;
+      background: linear-gradient(180deg, var(--bg) 0%, #f6fdf9 100%);
       font-family: 'Nunito', sans-serif;
     }
 /*********************************************/
@@ -36,8 +37,16 @@
       display: none;
     }
     .explore-btn {
-      border-radius: 20px;
-      font-size: 13px;
-      padding: 4px 12px;
+      font-weight:600;
+       color:var(--accent);
+       font-size:13px;
+       border-radius:12px;
+       background:#ecfdf3;
+       border:1px solid #c7f9db;
+       display:inline-block;
+       padding:8px 12px;
+       min-width: 60%;
+       text-decoration: none;
+       transition-duration: 0.2s;
     }
     
