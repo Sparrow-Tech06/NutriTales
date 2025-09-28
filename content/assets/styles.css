@@ -2,6 +2,7 @@
     --bg-color: #fafafa ;
     --header: #2ecc71; ;
     --text: #fff ;
+    --accent:#FF6B6B; /* f39c12 */
  }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -71,7 +72,7 @@
     .back-btn:hover{background:rgba(255,255,255,0.3)}
 
     .floating-btn {
-      background: #f39c12;
+      background:var(--accent);
       border-radius: 12px;
       width: 50px;
       height: 50px;
