@@ -92,7 +92,7 @@
  #animalName {
      color:var(--primary);
      font-weight:800;
-     font-size: 1.10rem;
+     font-size: 1.50rem;
      letter-spacing:-.3px;
  }
 #animalDesc {
@@ -101,7 +101,7 @@
 }
 #animalFact {
      flex:1;padding: 10px 0px ;
-     font-size: 8rem;
+     font-size: 0.8rem;
      border-radius: var(--radius) ;
      background: var(--fact) ;
      color: var(--text) ;
