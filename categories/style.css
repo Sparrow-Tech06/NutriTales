@@ -49,6 +49,7 @@
       0% { background-position: -400px 0; }
       100% { background-position: 400px 0; }
     }
+  h6 { font-weight:600; }
     .fruit-img {
       width: 70px;
       height: 70px;
