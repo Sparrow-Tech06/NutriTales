@@ -101,9 +101,9 @@
      color: var(--text) ;
 }
 #animalFact {
-     flex:1;padding: 10px 0px ;
+     flex:1;padding: 10px 10px ;
      font-size: 0.8rem ;
-     border-radius: var(--radius) ;
+     border-radius: 8px ;
      background: var(--fact) ;
      color: var(--text) ;
 }
