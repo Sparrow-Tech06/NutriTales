@@ -1,5 +1,5 @@
 :root {
-    --bg-color: #ffffff ;
+    --bg-color: #fafafa ;
     --header: #f39c12 ;
     --text: #fff ;
  }
@@ -39,13 +39,23 @@
     }
 /***************************************************/
     .back-btn {
-      position: absolute;
-      top: 15px;
-      left: 15px;
-      color: #fff;
-      font-size: 1.5rem;
-      text-decoration: none;
+      background:rgba(255,255,255,0.15);
+      border:0;
+      color:#fff;
+      font-size:1.2rem;
+      position:absolute;
+      top:1rem;
+      left:1rem;
+      width:38px;
+      height:38px;
+      border-radius:50%;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      transition:.25s;
     }
+    .back-btn:hover{background:rgba(255,255,255,0.3)}
+
     .floating-btn {
       background: #f39c12;
       border-radius: 12px;
