@@ -1,13 +1,17 @@
-
 {
-  "meta": {"slug":"mango","category":"fruits","availableLangs":["en","bn"]},
-  "name": {"en":"Mango","bn":"আম"},
-  "story": {
-    "en": "Hi! I am Mango 🥭 — the king of fruits in many places. Sweet and golden, I bring joy and I am packed with vitamin A, vitamin C and antioxidants. I support eyesight and give a tasty energy boost.",
-    "bn": "হাই! আমি আম 🥭 — অনেক জায়গায় ফলের রাজা। মিষ্টি ও পসরা, আমি ভিটামিন এ, সি ও অ্যান্টিঅক্সিডেন্টে ভরপুর।"
+  "eng": {
+    "name": "Apple",
+    "desc": "Hello! I am Apple 🍎. I may look simple, but inside me lives a little doctor. If you eat me every day, I help make your immunity stronger, improve your digestion, and keep your heart healthy. My Vitamin C and fiber keep your body fresh and full of energy, so you feel active all day. I am not just a fruit, I am your health partner. Whether in your lunchbox, as juice, in a salad, or as a sweet dish, I always add taste and goodness. Sometimes I am red, sometimes green, and sometimes yellow – but in every color, I bring you love and care. That’s why people say: “An apple a day keeps the doctor away.”",
+    "fact": "Did you know apples float in water because 25% of their volume is air? 🍏🍎"
   },
-  "benefits": {
-    "en": ["Rich in vitamin A & C", "Antioxidant properties", "Good energy source"],
-    "bn": ["ভিটামিন এ ও সি সমৃদ্ধ", "অ্যান্টিঅক্সিডেন্ট আছে", "শক্তির ভাল উৎস"]
+  "hin": {
+    "name": "Apple",
+    "desc": "Hello! I am Apple 🍎. I may look simple, but inside me lives a little doctor. If you eat me every day, I help make your immunity stronger, improve your digestion, and keep your heart healthy. My Vitamin C and fiber keep your body fresh and full of energy, so you feel active all day. I am not just a fruit, I am your health partner. Whether in your lunchbox, as juice, in a salad, or as a sweet dish, I always add taste and goodness. Sometimes I am red, sometimes green, and sometimes yellow – but in every color, I bring you love and care. That’s why people say: “An apple a day keeps the doctor away.”",
+    "fact": "Did you know apples float in water because 25% of their volume is air? 🍏🍎"
+  },
+  "ban": {
+    "name": "আপেল",
+    "desc": "Hello! I am Apple 🍎. I may look simple, but inside me lives a little doctor. If you eat me every day, I help make your immunity stronger, improve your digestion, and keep your heart healthy. My Vitamin C and fiber keep your body fresh and full of energy, so you feel active all day. I am not just a fruit, I am your health partner. Whether in your lunchbox, as juice, in a salad, or as a sweet dish, I always add taste and goodness. Sometimes I am red, sometimes green, and sometimes yellow – but in every color, I bring you love and care. That’s why people say: “An apple a day keeps the doctor away.”",
+    "fact": "Did you know apples float in water because 25% of their volume is air? 🍏🍎"
   }
 }
