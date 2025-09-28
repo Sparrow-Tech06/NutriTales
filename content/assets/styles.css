@@ -2,8 +2,8 @@
     --bg-color: #fafafa ;
     --header: #2ecc71; ;
     --text: #fff ;
-    --primary:#2ecc71; /* fresh green */
-    --accent:#FF6B6B; /* f39c12 */
+    --primary: #444 ;
+    --accent: #FF6B6B ; /* f39c12 */
  }
 @media (prefers-color-scheme: dark) {
   :root {
@@ -99,7 +99,7 @@
 }
 #animalFact {
      flex:1;padding:.75rem;
-     border-radius: --radius:14px ;
+     border-radius: var(--radius) ;
      background:#f9f9f9;
      box-shadow:inset 0 0 6px rgba(0,0,0,0.02);
 }
