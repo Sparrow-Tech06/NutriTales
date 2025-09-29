@@ -68,7 +68,7 @@
       display: none;
     }
     .explore-btn {
-      font-weight:600;
+       font-weight:600;
        color:var(--accent);
        font-size:13px;
        border-radius:12px;
@@ -80,5 +80,5 @@
        text-decoration: none;
        transition-duration: 0.2s;
     }
-  .explore-btn { color:var(--accent); background:#ecfdf3; border:1px solid #c7f9db; transform:scale(0.90); }
+  .explore-btn:hover { color:var(--accent); background:#ecfdf3; border:1px solid #c7f9db; transform:scale(0.90); }
     
