@@ -74,11 +74,20 @@
   });
 
   function loadAnimal(lang) {
-    if (!data[lang]) return;
-    animalName.textContent = data[lang].name;
+  if (!data[lang]) return;
+
+  animalName.textContent = data[lang].name;
+
+  // desc যদি array হয় তাহলে join করে দেখাও
+  if (Array.isArray(data[lang].desc)) {
+    animalDesc.innerHTML = data[lang].desc.map(line => `<p>${line}</p>`).join("");
+  } else {
     animalDesc.textContent = data[lang].desc;
-    animalFact.textContent = data[lang].fact;
   }
+
+  animalFact.textContent = data[lang].fact;
+}
+
 });
 
   </script>
