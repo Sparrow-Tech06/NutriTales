@@ -4,7 +4,7 @@
     --text: #444 ;
     --primary: #444 ;
     --accent: #FF6B6B ; /* f39c12 */
-    --fact: #f8f9fa ;
+    --fact: #eafaf1 ;
     --hero-figure: #ffffff ;
  }
 @media (prefers-color-scheme: dark) {
