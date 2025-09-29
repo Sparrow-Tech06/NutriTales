@@ -97,17 +97,17 @@
 /*****************************************************/
  #animalName {
      color:var(--primary);
-     font-weight: 600 ;
-     font-size: 1.50rem;
+     font-weight: 700 ;
+     font-size: 1.70rem;
      letter-spacing:-.3px;
  }
 #animalDesc {
-     font-size: 0.9rem;
+     font-size: 1rem;
      color: var(--text) ;
 }
 #animalFact {
      flex:1;padding: 10px 10px ;
-     font-size: 0.8rem ;
+     font-size: 0.9rem ;
      border-radius: 8px ;
      background: var(--fact) ;
      color: var(--text) ;
