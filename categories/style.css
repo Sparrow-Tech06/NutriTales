@@ -72,4 +72,5 @@
        text-decoration: none;
        transition-duration: 0.2s;
     }
+  .explore-btn { color:var(--accent); background:#ecfdf3; border:1px solid #c7f9db; transform:scale(0.90); }
     
