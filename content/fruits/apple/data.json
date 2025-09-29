@@ -1,17 +1,35 @@
 {
   "eng": {
     "name": "Apple",
-    "desc": "Hello! I am Apple 🍎. I may look simple, but inside me lives a little doctor. If you eat me every day, I help make your immunity stronger, improve your digestion, and keep your heart healthy. My Vitamin C and fiber keep your body fresh and full of energy, so you feel active all day. I am not just a fruit, I am your health partner. Whether in your lunchbox, as juice, in a salad, or as a sweet dish, I always add taste and goodness. Sometimes I am red, sometimes green, and sometimes yellow – but in every color, I bring you love and care. That’s why people say: “An apple a day keeps the doctor away.”",
+    "desc": [
+      "Hello! I am Apple 🍎. I may look simple, but inside me lives a little doctor.",
+      "If you eat me every day, I help make your immunity stronger, improve your digestion, and keep your heart healthy.",
+      "My Vitamin C and fiber keep your body fresh and full of energy, so you feel active all day.",
+      "I am not just a fruit, I am your health partner.",
+      "Whether in your lunchbox, as juice, in a salad, or as a sweet dish, I always add taste and goodness.",
+      "Sometimes I am red, sometimes green, and sometimes yellow – but in every color, I bring you love and care.",
+      "That’s why people say: An apple a day keeps the doctor away."
+    ],
     "fact": "Did you know apples float in water because 25% of their volume is air? 🍏🍎"
   },
   "hin": {
-    "name": "Apple",
-    "desc": "Hello! I am Apple 🍎. I may look simple, but inside me lives a little doctor. If you eat me every day, I help make your immunity stronger, improve your digestion, and keep your heart healthy. My Vitamin C and fiber keep your body fresh and full of energy, so you feel active all day. I am not just a fruit, I am your health partner. Whether in your lunchbox, as juice, in a salad, or as a sweet dish, I always add taste and goodness. Sometimes I am red, sometimes green, and sometimes yellow – but in every color, I bring you love and care. That’s why people say: “An apple a day keeps the doctor away.”",
-    "fact": "Did you know apples float in water because 25% of their volume is air? 🍏🍎"
+    "name": "सेब",
+    "desc": [
+      "नमस्ते! मैं सेब 🍎 हूँ। दिखने में साधारण हूँ, लेकिन मेरे अंदर एक छोटा डॉक्टर रहता है।",
+      "अगर आप मुझे रोज़ खाते हैं, तो मैं आपकी रोग प्रतिरोधक क्षमता को मजबूत करता हूँ, पाचन को बेहतर करता हूँ और हृदय को स्वस्थ रखता हूँ।",
+      "मेरे विटामिन C और फाइबर आपके शरीर को ताज़गी और ऊर्जा से भर देते हैं, जिससे आप पूरे दिन सक्रिय रहते हैं।",
+      "मैं केवल एक फल नहीं हूँ, मैं आपका सेहत साथी हूँ।"
+    ],
+    "fact": "क्या आप जानते हैं? सेब पानी में तैरते हैं क्योंकि उनकी 25% मात्रा हवा होती है। 🍏🍎"
   },
   "ban": {
     "name": "আপেল",
-    "desc": "মি শুধু একটি ফল নই আমি তোমার স্বাস্থ্যের সঙ্গী। ",
-    "fact": "Did you know apples float in water because 25% of their volume is air? 🍏🍎"
+    "desc": [
+      "হ্যালো! আমি আপেল 🍎। আমি দেখতে সহজ, কিন্তু আমার ভেতরে একজন ছোট্ট ডাক্তার বাস করে।",
+      "যদি তুমি আমাকে প্রতিদিন খাও, আমি তোমার রোগ প্রতিরোধ ক্ষমতা শক্তিশালী করতে, তোমার হজমশক্তি উন্নত করতে এবং তোমার হৃদয়কে সুস্থ রাখতে সাহায্য করি।",
+      "আমার ভিটামিন সি এবং ফাইবার তোমার শরীরকে সতেজ এবং শক্তিতে ভরপুর রাখে, যাতে তুমি সারাদিন সক্রিয় বোধ করো।",
+      "আমি শুধু একটি ফল নই, আমি তোমার স্বাস্থ্যের সঙ্গী।"
+    ],
+    "fact": "তুমি কি জানো? আপেলের প্রায় ২৫% ভেতরে বাতাস থাকে বলে ওগুলো পানিতে ভাসে। 🍏🍎"
   }
 }
