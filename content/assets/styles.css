@@ -91,7 +91,9 @@
       position: fixed;
       bottom: 20px;
       right: 20px;
+      transition-duration: 0.3s;
     }
+ .floating-btn:hover { transform:scale(0.95); }
 /*****************************************************/
  #animalName {
      color:var(--primary);
