@@ -3,6 +3,12 @@
     --primary:#2ecc71;
 }
  /************************************/
+  *{
+      margin: 0 ;
+      paddding: 0 ;
+      box-sizing: border-box ;
+      user-select: none ;
+  }
     body {
       background: linear-gradient(180deg, var(--bg) 0%, #f6fdf9 100%);
       font-family: 'Nunito', sans-serif;
