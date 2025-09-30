@@ -1,1 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no,viewport-fit=cover">  
 
+  <title> Fruit </title>
+ 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+  
+</head>
+<body>
+
+   <header class="header">
+      <i class="bi bi-arrow-left back-btn" onclick="window.history.back()"></i>
+  </header>
+  
+<main class="container py-3" style="max-width:660px;">
+
+    <section id="fruitList">
+            <!-- data automatically added here -->
+    </section>
+  
+</main>
+
+<script>
+     // --- Data Structure: Saare fruit ka data ek array mein store kiya gaya hai ---
+const fruitData = [
+    {
+        name: "Apple",
+        description: "Sweet and crunchy red fruit.",
+        slug: "apple", // Isse CSS classes (card-apple, btn-apple) aur data-fruit attribute banenge.
+        imagePath: "../assets/apple.png",
+        storyLink: "../content/fruits/apple/story.html"
+    },
+    {
+        name: "Mango",
+        description: "King of fruits, juicy and tasty.",
+        slug: "mango",
+        imagePath: "../assets/mango.png",
+        storyLink: "../content/fruits/mango/story.html"
+    },
+    {
+        name: "Banana",
+        description: "Soft, sweet and full of energy.",
+        slug: "banana",
+        imagePath: "../assets/banana.png",
+        storyLink: "banana.html"
+    },
+    {
+        name: "Grapes",
+        description: "Tiny juicy fruits in bunches.",
+        slug: "grapes",
+        imagePath: "../assets/grapes.png",
+        storyLink: "grapes.html"
+    }
+    // Naya fruit add karne ke liye, bas yahan ek naya object daal dein!
+];
+</script>
+<script src="app.js"> </script>
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- SweetAlert2 cdn -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  
+  <!-- Website version checker & cache clear -->
+  <script src="https://sparrow-tech06.github.io/NutriTales/addon/version-check.js"> </script>
+  <!-- App version fetch & show update Popup -->
+  <script src="https://sparrow-tech06.github.io/NutriTales/addon/app-version-checker.js"> </script>
+
+</body>
+</html>
