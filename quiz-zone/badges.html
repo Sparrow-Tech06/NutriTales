@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Badges - Modern & Mysterious</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #6a0dad; /* Deep Purple */
+      --secondary-color: #00bcd4; /* Cyan */
+      --bg-color: #f5f7fb;
+      --card-bg: white;
+      --locked-color: #bdbdbd;
+    }
+    body {
+      background: var(--bg-color);
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+    }
+    .container {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    /* --- Profile Card Modernization --- */
+    .profile-card {
+      text-align: center;
+      padding: 35px;
+      background: var(--card-bg);
+      border-radius: 25px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      margin: 30px auto;
+      max-width: 380px; /* Slimmer card */
+      transition: transform 0.3s ease-in-out;
+    }
+    .profile-card:hover {
+        transform: translateY(-5px);
+    }
+    .profile-pic {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      background: var(--primary-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto;
+      color: white;
+      font-size: 2.5rem;
+      border: 4px solid var(--secondary-color);
+      box-shadow: 0 0 0 5px rgba(106, 13, 173, 0.2);
+    }
+    #username {
+      font-weight: 700;
+      margin-top: 15px;
+      color: #333;
+    }
+    #levelLabel {
+      font-weight: 600;
+      color: var(--primary-color) !important;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    /* --- Progress Bar Feature --- */
+    .progress-section {
+        margin-top: 20px;
+        text-align: left;
+    }
+    .progress {
+        height: 10px;
+        background-color: #e9ecef;
+    }
+    .progress-bar {
+        background-color: var(--secondary-color);
+        transition: width 1s ease;
+    }
+    .progress-label {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.85rem;
+        margin-bottom: 5px;
+        font-weight: 600;
+    }
+
+    /* --- Badge Grid Modernization --- */
+    h2 {
+        font-weight: 700;
+        color: #333;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .badge-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Responsive grid */
+      gap: 20px;
+      margin: 30px auto;
+      max-width: 900px; /* Wider grid */
+    }
+    .badge-item {
+      position: relative;
+      width: 100%;
+      height: 100px;
+      padding: 10px;
+      border-radius: 18px;
+      text-align: center;
+      color: white;
+      font-weight: 600;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.3s;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .badge-item:hover {
+        transform: translateY(-5px) scale(1.05);
+        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+    .badge-icon {
+        font-size: 2rem;
+        margin-bottom: 5px;
+        line-height: 1;
+    }
+    .badge-name {
+        font-size: 0.75rem;
+        line-height: 1;
+    }
+
+    /* Locked State with Tooltip Feature */
+    .badge-locked {
+      background: var(--locked-color) !important;
+      color: #757575 !important;
+      filter: grayscale(0.8);
+      box-shadow: none;
+    }
+    .badge-locked:hover {
+        transform: none;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Slight hover for visual feedback */
+    }
+    .badge-locked .coin-tag {
+        background: rgba(0,0,0,0.1);
+        color: white;
+    }
+    
+    /* NEW: Locked Badge Styling */
+    .badge-locked .badge-icon {
+        font-size: 3rem; /* Larger question mark icon */
+        margin-bottom: 0;
+    }
+    .badge-locked .badge-name {
+        visibility: hidden; /* Hide the badge name text */
+    }
+
+
+    /* Coin Tag Modernized */
+    .coin-tag {
+      position: absolute;
+      top: 6px; /* Moved to the top right */
+      right: 6px;
+      background: rgba(0,0,0,0.15);
+      color: white;
+      font-size: 0.7rem;
+      padding: 3px 8px;
+      border-radius: 15px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 3px;
+    }
+
+    /* New Feature: Tooltip for Locked Badges */
+    .tooltip-inner {
+        background-color: var(--primary-color);
+        color: white;
+        padding: 8px 12px;
+        border-radius: 10px;
+        font-weight: 600;
+    }
+    .tooltip.show {
+        opacity: 1;
+    }
+    .tooltip .tooltip-arrow::before {
+        border-top-color: var(--primary-color) !important;
+    }
+
+
+    /* nth-child colors (Using softer, modern tones) */
+    .badge-grid .badge-item:nth-child(1) { background: #673ab7; }
+    .badge-grid .badge-item:nth-child(2) { background: #3f51b5; }
+    .badge-grid .badge-item:nth-child(3) { background: #2196f3; }
+    .badge-grid .badge-item:nth-child(4) { background: #00bcd4; }
+    .badge-grid .badge-item:nth-child(5) { background: #009688; }
+    .badge-grid .badge-item:nth-child(6) { background: #4caf50; }
+    .badge-grid .badge-item:nth-child(7) { background: #8bc34a; }
+    .badge-grid .badge-item:nth-child(8) { background: #cddc39; color:black; }
+    .badge-grid .badge-item:nth-child(9) { background: #ffeb3b; color: black; }
+    .badge-grid .badge-item:nth-child(10) { background: #ffc107; }
+    .badge-grid .badge-item:nth-child(11) { background: #ff9800; }
+    .badge-grid .badge-item:nth-child(12) { background: #ff5722; }
+    .badge-grid .badge-item:nth-child(13) { background: #e91e63; }
+    .badge-grid .badge-item:nth-child(14) { background: #9c27b0; }
+    .badge-grid .badge-item:nth-child(15) { background: #607d8b; }
+    .badge-grid .badge-item:nth-child(16) { background: #795548; }
+    .badge-grid .badge-item:nth-child(17) { background: #6d4c41; }
+    .badge-grid .badge-item:nth-child(18) { background: #ad1457; }
+    .badge-grid .badge-item:nth-child(19) { background: #1de9b6; color:black; }
+    .badge-grid .badge-item:nth-child(20) { background: #ff1744; }
+    .badge-grid .badge-item:nth-child(21) { background: #304ffe; }
+    .badge-grid .badge-item:nth-child(22) { background: #00e676; color:black; }
+    .badge-grid .badge-item:nth-child(23) { background: #ff6d00; }
+    .badge-grid .badge-item:nth-child(24) { background: #aa00ff; }
+  </style>
+</head>
+<body>
+
+  <div class="profile-card">
+    <div class="profile-pic">
+      <i class="bi bi-person-fill"></i>
+    </div>
+    <h3 id="username" class="mb-0">Player One</h3>
+    <p id="levelLabel" class="text-muted small">Beginner</p>
+
+    <div class="d-flex justify-content-center gap-4 my-3">
+        <p class="mb-0">
+          <i class="bi bi-coin text-warning"></i> Coins: <span id="coins" class="fw-bold">0</span>
+        </p>
+        <p class="mb-0">
+          <i class="bi bi-patch-check-fill text-primary"></i> Badges: 
+          <span id="unlockedCount" class="fw-bold">0</span>/<span id="totalBadges">0</span>
+        </p>
+    </div>
+
+    <div class="progress-section">
+        <div class="progress-label">
+            <span id="progressTitle">Next Badge: <span class="text-primary">N/A</span></span>
+            <span id="progressValue">0/0</span>
+        </div>
+        <div class="progress" role="progressbar" aria-label="Coin Progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+          <div class="progress-bar" id="coinProgress" style="width: 0%"></div>
+        </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2>🏆 Badge Collection</h2>
+    <div class="badge-grid" id="badgeGrid"></div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // User coins from localStorage (replace with quiz score system)
+    let coins = parseInt(localStorage.getItem("coins") || "580"); // Start with 580 for a demo
+
+    // Generate 24 badges dynamically
+    const badgeNames = [
+      "Explorer","Achiever","Champion","Legend","Mastermind",
+      "Hero","Warrior","Guardian","Scholar","Inventor",
+      "Strategist","Commander","Elite","Titan","Ninja",
+      "Samurai","Gladiator","Wizard","Oracle","Phoenix",
+      "Dragon","Mythic","Supreme","Immortal"
+    ];
+
+    const badges = badgeNames.map((name, i) => ({
+      name,
+      required: (i + 1) * 50, // Start at 50, then 100, 150...
+      icon: "bi-award-fill"
+    }));
+
+    document.getElementById("coins").innerText = coins;
+    document.getElementById("totalBadges").innerText = badges.length;
+
+    let unlocked = 0;
+    let currentBadge = "Beginner";
+    let nextBadge = null;
+
+    const badgeGrid = document.getElementById("badgeGrid");
+    badges.forEach((b, i) => {
+      const div = document.createElement("div");
+      const unlockedThis = coins >= b.required;
+
+      if (unlockedThis) {
+        unlocked++;
+        currentBadge = b.name;
+      } else if (!nextBadge) {
+        // Find the very next locked badge to track progress
+        nextBadge = b;
+      }
+
+      div.className = `badge-item ${unlockedThis ? "" : "badge-locked"}`;
+      div.setAttribute('data-bs-toggle', 'tooltip');
+      div.setAttribute('data-bs-placement', 'top');
+
+      const badgeIcon = unlockedThis ? b.icon : "bi-question-circle-fill"; // Change icon to question mark for locked
+      const badgeName = unlockedThis ? b.name : "?"; // Change name to question mark for locked
+
+      if (unlockedThis) {
+        div.setAttribute('title', `Unlocked! You earned this at ${b.required} coins.`);
+      } else {
+        // Tooltip text for locked badges
+        const needed = b.required - coins;
+        div.setAttribute('title', `Locked! You need ${needed} more coins to unlock this.`);
+      }
+
+
+      div.innerHTML = `
+        <i class="bi ${badgeIcon} badge-icon"></i>
+        <small class="badge-name">${badgeName}</small>
+        <span class="coin-tag"><i class="bi bi-coin"></i>${b.required}</span>
+      `;
+      badgeGrid.appendChild(div);
+    });
+
+    document.getElementById("levelLabel").innerText = currentBadge;
+    document.getElementById("unlockedCount").innerText = unlocked;
+
+    // --- Progress Bar Logic ---
+    if (nextBadge) {
+        const required = nextBadge.required;
+        const prevRequired = unlocked > 0 ? badges[unlocked - 1].required : 0;
+        const progressNeeded = required - prevRequired;
+        const progressCurrent = coins - prevRequired;
+        const progressPercentage = Math.min(100, (progressCurrent / progressNeeded) * 100);
+
+        document.getElementById("progressTitle").innerHTML = `Next Badge: <span class="text-primary">${nextBadge.name}</span>`;
+        document.getElementById("progressValue").innerText = `${coins}/${required} coins`;
+        document.getElementById("coinProgress").style.width = `${progressPercentage}%`;
+        document.getElementById("coinProgress").setAttribute('aria-valuenow', progressPercentage);
+    } else {
+        // All badges unlocked
+        document.getElementById("progressTitle").innerHTML = `All Badges Unlocked!`;
+        document.getElementById("progressValue").innerText = `${coins}/${badges[badges.length - 1].required} coins`;
+        document.getElementById("coinProgress").style.width = `100%`;
+        document.getElementById("coinProgress").setAttribute('aria-valuenow', 100);
+    }
+
+    // Initialize all tooltips on the page (requires bootstrap.bundle.min.js)
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+  </script>
+
+</body>
+</html>
+
