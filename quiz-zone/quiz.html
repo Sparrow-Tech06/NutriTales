@@ -87,6 +87,7 @@
     .wrong { background: #ffcdd2 !important; }
     .success { background: var(--accent) !important; margin: 40px auto; color:#fff !important; }
     .primary { background: #FF6B6B !important; margin: 40px auto; color: #fff !important; }
+    
   </style>
 </head>
 <body>
@@ -155,14 +156,22 @@
       if (selected === correct) {
         btn.classList.add("correct");
         coins += 10;
-        localStorage.setItem("coins", coins);
-        document.getElementById("coins").innerText = coins;
       } else {
         btn.classList.add("wrong");
         allBtns.forEach(b => {
           if (b.innerText === correct) b.classList.add("correct");
         });
+        // deduct coins only if > 0
+        if (coins > 0) {
+          coins -= 10;
+          if (coins < 0) coins = 0; // safety check
+        }
       }
+
+      // update storage and UI
+      localStorage.setItem("coins", coins);
+      document.getElementById("coins").innerText = coins;
+
       document.getElementById("nextBtn").classList.remove("d-none");
     }
 
@@ -181,8 +190,8 @@
       document.getElementById("question").innerText = "🎉 Game Over!";
       document.getElementById("options").innerHTML = `
         <p class='fw-bold text-success'>Well played!</p>
-        <button class='btn success w-100 my-2' onclick='playAgain()'>Play Again</button>
-        <a href='index.html' class='btn primary w-100 my-2'>Back to Home</a>
+        <button class='btn success w-100 my-2' onclick='playAgain()'> Play Again </button>
+        <a onclick="window.location." class='btn primary w-100 my-2'> Back to Home </a>
       `;
       document.getElementById("nextBtn").classList.add("d-none");
     }
