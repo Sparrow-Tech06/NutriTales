@@ -118,6 +118,12 @@
     .offcanvas {
        max-width: 80% ;
     }
+    .offcanvas-footer {
+      border-top: 1px solid #c7f9db;
+      padding: 10px 15px;
+      font-size: 13px;
+      color: #aaa;
+    }
     ul li a {
        text-decoration: none;
        text-align: center ;
@@ -212,7 +218,7 @@
       <h5 class="offcanvas-title"> </h5>
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
     </div>
-    <div class="offcanvas-body">
+    <div class="offcanvas-body d-flex flex-column">
       <ul class="list-unstyled">
         <li><a onclick="window.location.href='docs/about-us.html';" class="d-block py-2"> About Us </a></li>
         <li><a onclick="window.location.href='docs/contact-us.html';" class="d-block py-2"> Contact Us </a></li>
@@ -222,6 +228,9 @@
         <li><a onclick="window.location.href='docs/disclaimer.html';" class="d-block py-2"> Disclaimer </a></li>
         <li><a onclick="window.location.href='#';" class="d-block py-2"> Rate Us </a></li>
       </ul>
+       <div class="offcanvas-footer mt-auto">
+           © 2025 NOVU-Apps
+      </div>
     </div>
   </div>
 
