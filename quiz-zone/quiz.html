@@ -191,7 +191,7 @@
       document.getElementById("options").innerHTML = `
         <p class='fw-bold text-success'>Well played!</p>
         <button class='btn success w-100 my-2' onclick='playAgain()'> Play Again </button>
-        <a onclick="window.location." class='btn primary w-100 my-2'> Back to Home </a>
+        <a onclick="window.history.back()" class='btn primary w-100 my-2'> Back to Home </a>
       `;
       document.getElementById("nextBtn").classList.add("d-none");
     }
