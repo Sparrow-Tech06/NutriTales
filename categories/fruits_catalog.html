@@ -25,73 +25,46 @@
   
 <main class="container py-3" style="max-width:660px;">
 
-  <section id="fruitList">
-    <article class="card card-apple d-flex align-items-center" data-fruit="apple">
-      <div class="d-flex align-items-center w-100">
-        <div class="me-3">
-          <div class="skeleton"></div>
-          <img src="../assets/apple.png" class="fruit-img" onload="showImage(this)" draggable="false">
-        </div>
-        <div class="flex-grow-1">
-          <hgroup>
-            <h6 class="mb-1"> Apple </h6>
-            <p class="text-muted small mb-2">Sweet and crunchy red fruit.</p>
-          </hgroup>
-          <a href="../content/fruits/apple/story.html" class="btn explore-btn btn-apple">Explore Now</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="card card-mango d-flex align-items-center" data-fruit="mango">
-      <div class="d-flex align-items-center w-100">
-        <div class="me-3">
-          <div class="skeleton"></div>
-          <img src="../assets/mango.png" class="fruit-img" onload="showImage(this)" draggable="false">
-        </div>
-        <div class="flex-grow-1">
-          <hgroup>
-            <h6 class="mb-1">Mango</h6>
-            <p class="text-muted small mb-2">King of fruits, juicy and tasty.</p>
-          </hgroup>
-          <a href="../content/fruits/mango/story.html" class="btn explore-btn btn-mango">Explore Now</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="card card-banana d-flex align-items-center" data-fruit="banana">
-      <div class="d-flex align-items-center w-100">
-        <div class="me-3">
-          <div class="skeleton"></div>
-          <img src="../assets/banana.png" class="fruit-img" onload="showImage(this)" draggable="false">
-        </div>
-        <div class="flex-grow-1">
-          <hgroup>
-            <h6 class="mb-1">Banana</h6>
-            <p class="text-muted small mb-2">Soft, sweet and full of energy.</p>
-          </hgroup>
-          <a href="banana.html" class="btn explore-btn btn-banana">Explore Now</a>
-        </div>
-      </div>
-    </article>
-
-    <article class="card card-grapes d-flex align-items-center" data-fruit="grapes">
-      <div class="d-flex align-items-center w-100">
-        <div class="me-3">
-          <div class="skeleton"></div>
-          <img src="../assets/grapes.png" class="fruit-img" onload="showImage(this)" draggable="false">
-        </div>
-        <div class="flex-grow-1">
-          <hgroup>
-            <h6 class="mb-1">Grapes</h6>
-            <p class="text-muted small mb-2">Tiny juicy fruits in bunches.</p>
-          </hgroup>
-          <a href="grapes.html" class="btn explore-btn btn-grapes">Explore Now</a>
-        </div>
-      </div>
-    </article>
-  </section>
+    <section id="fruitList">
+            <!-- data automatically added here -->
+    </section>
+  
 </main>
 
+<script>
+     // --- Data Structure: Saare fruit ka data ek array mein store kiya gaya hai ---
+const fruitData = [
+    {
+        name: "Apple",
+        description: "Sweet and crunchy red fruit.",
+        slug: "apple", // Isse CSS classes (card-apple, btn-apple) aur data-fruit attribute banenge.
+        imagePath: "../assets/apple.png",
+        storyLink: "../content/fruits/apple/story.html"
+    },
+    {
+        name: "Mango",
+        description: "King of fruits, juicy and tasty.",
+        slug: "mango",
+        imagePath: "../assets/mango.png",
+        storyLink: "../content/fruits/mango/story.html"
+    },
+    {
+        name: "Banana",
+        description: "Soft, sweet and full of energy.",
+        slug: "banana",
+        imagePath: "../assets/banana.png",
+        storyLink: "banana.html"
+    },
+    {
+        name: "Grapes",
+        description: "Tiny juicy fruits in bunches.",
+        slug: "grapes",
+        imagePath: "../assets/grapes.png",
+        storyLink: "grapes.html"
+    }
+    // Naya fruit add karne ke liye, bas yahan ek naya object daal dein!
+];
+</script>
 <script src="app.js"> </script>
 
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
