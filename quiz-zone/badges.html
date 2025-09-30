@@ -41,15 +41,16 @@
       text-align: center;
       padding: 35px;
       background: var(--card-bg);
-      border-radius: 25px;
+      border-bottom-left-radius: 25px;
+      border-bottom-right-radius: 25px;
       box-shadow: 0 10px 18px rgba(11,40,60,0.06);
-      margin: 30px auto;
+      margin: 0px auto 30px ;
       max-width: 660px; /* Slimmer card */
       transition: transform 0.3s ease-in-out;
     }
     .profile-pic {
-      width: 110px;
-      height: 110px;
+      width: 90px;
+      height: 90px;
       border-radius: 50%;
       background: var(--primary-color);
       display: flex;
@@ -72,7 +73,7 @@
       text-transform: uppercase;
       letter-spacing: 1px;
     }
-    /* --- Progress Bar Feature --- */
+    /****************** Progress Bar Feature ********************/
     .progress-section {
         margin-top: 20px;
         text-align: left;
@@ -125,10 +126,6 @@
       cursor: pointer;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     }
-    .badge-item:hover {
-        transform: translateY(-5px) scale(1.05);
-        box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-    }
     .badge-icon {
         font-size: 2rem;
         margin-bottom: 5px;
@@ -139,7 +136,7 @@
         line-height: 1;
     }
 
-    /* Locked State with Tooltip Feature */
+    /**************** Locked State with Tooltip Feature ****************/
     .badge-locked {
       background: var(--locked-color) !important;
       color: #757575 !important;
@@ -165,7 +162,7 @@
     }
 
 
-    /* Coin Tag Modernized */
+    /******************** Coin Tag Modernized *********************/
     .coin-tag {
       position: absolute;
       top: 6px; /* Moved to the top right */
@@ -230,7 +227,7 @@
     <div class="profile-pic">
       <i class="bi bi-person-fill"></i>
     </div>
-    <h3 id="username" class="mb-0">Player One</h3>
+    <h3 id="username" class="mb-0"> </h3>
     <p id="levelLabel" class="text-muted small">Beginner</p>
 
     <div class="d-flex justify-content-center gap-4 my-3">
