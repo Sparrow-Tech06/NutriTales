@@ -92,7 +92,9 @@
 <body>
 
   <header class="header">
-     <i class="bi bi-arrow-left back-btn" onclick="window.history.back()"></i>
+     <a onclick="return false;" aria-label="Back" class="btn back-btn back-link">
+         <i class="bi bi-arrow-left"></i>
+      </a>
      <p class="badges">
         <i class="bi bi-coin coin"></i> Coins: <span id="coins">0</span>
      </p>
