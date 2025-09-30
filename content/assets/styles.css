@@ -37,8 +37,10 @@
       background: var(--header);
       color: var(--text);
       padding:1rem 1.5rem 1rem;
-      position: relative;
+      position: sticky ;
+      top: 0;
       border-radius:0 0 30px 30px;
+      z-index: 999 ;
     }
    /* .animal-header img {
       width: 150px;
