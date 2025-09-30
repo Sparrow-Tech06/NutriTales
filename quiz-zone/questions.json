@@ -1,17 +1,112 @@
 [
   {
-    "q": "Which is the capital of France?",
-    "options": ["Berlin", "Madrid", "Paris", "Lisbon"],
-    "answer": "Paris"
+    "q": "Which vitamin is most found in oranges?",
+    "options": ["Vitamin A", "Vitamin B12", "Vitamin C", "Vitamin D"],
+    "answer": "Vitamin C"
   },
   {
-    "q": "2 + 2 = ?",
-    "options": ["3", "4", "5", "6"],
-    "answer": "4"
+    "q": "Which fruit is called the 'king of fruits'?",
+    "options": ["Apple", "Mango", "Banana", "Grapes"],
+    "answer": "Mango"
   },
   {
-    "q": "Which planet is known as Red Planet?",
-    "options": ["Earth", "Mars", "Venus", "Jupiter"],
-    "answer": "Mars"
+    "q": "Which fruit is good for keeping the doctor away?",
+    "options": ["Banana", "Apple", "Orange", "Papaya"],
+    "answer": "Apple"
+  },
+  {
+    "q": "Carrots are a good source of which vitamin?",
+    "options": ["Vitamin C", "Vitamin A", "Vitamin D", "Vitamin K"],
+    "answer": "Vitamin A"
+  },
+  {
+    "q": "Spinach is rich in which mineral?",
+    "options": ["Iron", "Calcium", "Zinc", "Iodine"],
+    "answer": "Iron"
+  },
+  {
+    "q": "Which vegetable is known as 'the queen of vegetables'?",
+    "options": ["Potato", "Tomato", "Brinjal", "Cauliflower"],
+    "answer": "Cauliflower"
+  },
+  {
+    "q": "Which dry fruit is best for boosting memory?",
+    "options": ["Almonds", "Cashews", "Walnuts", "Pistachios"],
+    "answer": "Walnuts"
+  },
+  {
+    "q": "Which dry fruit is soaked in water overnight for better digestion?",
+    "options": ["Cashews", "Dates", "Almonds", "Raisins"],
+    "answer": "Almonds"
+  },
+  {
+    "q": "Which dry fruit is naturally the sweetest?",
+    "options": ["Dates", "Walnuts", "Pistachios", "Cashews"],
+    "answer": "Dates"
+  },
+  {
+    "q": "Which herb is good for soothing the stomach?",
+    "options": ["Mint", "Coriander", "Basil", "Rosemary"],
+    "answer": "Mint"
+  },
+  {
+    "q": "Which herb is often called 'holy basil'?",
+    "options": ["Coriander", "Tulsi", "Mint", "Thyme"],
+    "answer": "Tulsi"
+  },
+  {
+    "q": "Ginger helps mainly with which problem?",
+    "options": ["Headache", "Digestion", "Weak bones", "Hair fall"],
+    "answer": "Digestion"
+  },
+  {
+    "q": "Which fruit is rich in potassium and good for heart health?",
+    "options": ["Mango", "Banana", "Apple", "Orange"],
+    "answer": "Banana"
+  },
+  {
+    "q": "Which vegetable is also called 'lady’s finger'?",
+    "options": ["Okra", "Beans", "Brinjal", "Spinach"],
+    "answer": "Okra"
+  },
+  {
+    "q": "Which fruit is famous for improving eyesight?",
+    "options": ["Guava", "Papaya", "Blueberries", "Watermelon"],
+    "answer": "Blueberries"
+  },
+  {
+    "q": "Which fruit is mostly water and very refreshing in summer?",
+    "options": ["Mango", "Banana", "Watermelon", "Apple"],
+    "answer": "Watermelon"
+  },
+  {
+    "q": "Which nut is often called 'brain food'?",
+    "options": ["Cashew", "Walnut", "Almond", "Pistachio"],
+    "answer": "Walnut"
+  },
+  {
+    "q": "Which dry fruit is commonly used for quick energy?",
+    "options": ["Dates", "Walnuts", "Almonds", "Raisins"],
+    "answer": "Dates"
+  },
+  {
+    "q": "Which herb is commonly used for fresh breath?",
+    "options": ["Mint", "Parsley", "Rosemary", "Coriander"],
+    "answer": "Mint"
+  },
+  {
+    "q": "Which fruit is rich in antioxidants and called a 'superfood'?",
+    "options": ["Blueberries", "Apples", "Papaya", "Banana"],
+    "answer": "Blueberries"
+  },
+  {
+    "q": "Which vegetable is also known as 'red gold' for its nutrition?",
+    "options": ["Tomato", "Beetroot", "Carrot", "Radish"],
+    "answer": "Tomato"
+  },
+  {
+    "q": "Which herb is commonly used in tea to fight cold?",
+    "options": ["Ginger", "Mint", "Tulsi", "All of these"],
+    "answer": "All of these"
   }
 ]
