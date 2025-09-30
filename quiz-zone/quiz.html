@@ -43,7 +43,6 @@
          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
          position: sticky ;
          top: 0 ;
-         z-index: 999;
       }
    .back-btn {  
       background:rgba(255,255,255,0.3);
@@ -102,6 +101,7 @@
   <div class="container text-center mt-4">
 
     <div class="card quiz-card p-4">
+      <h6 id="progress" class="text-muted mb-2">Question 0 / 0</h6>
       <h4 id="question">Loading Question...</h4>
       <div id="options" class="row row-cols-2 g-3 my-3"></div>
       <button id="nextBtn" class="btn success w-100 d-none">
@@ -130,6 +130,8 @@
     function loadQuestion() {
       const q = questions[currentQ];
       document.getElementById("question").innerText = q.q;
+      document.getElementById("progress").innerText = `Question ${currentQ+1} / ${questions.length}`;
+
       const optionsDiv = document.getElementById("options");
       optionsDiv.innerHTML = "";
       q.options.forEach(opt => {
@@ -168,11 +170,25 @@
         loadQuestion();
         document.getElementById("nextBtn").classList.add("d-none");
       } else {
-        document.getElementById("question").innerText = "🎉 Game Over!";
-        document.getElementById("options").innerHTML = "<p class='fw-bold text-success'>Well played!</p>";
-        document.getElementById("nextBtn").classList.add("d-none");
+        endGame();
       }
     };
+
+    function endGame(){
+      document.getElementById("progress").innerText = "";
+      document.getElementById("question").innerText = "🎉 Game Over!";
+      document.getElementById("options").innerHTML = `
+        <p class='fw-bold text-success'>Well played!</p>
+        <button class='btn success w-100 my-2' onclick='playAgain()'>Play Again</button>
+        <a href='index.html' class='btn primary w-100 my-2'>Back to Home</a>
+      `;
+      document.getElementById("nextBtn").classList.add("d-none");
+    }
+
+    function playAgain(){
+      currentQ = 0;
+      loadQuestion();
+    }
 
     loadQuestions();
   </script>
