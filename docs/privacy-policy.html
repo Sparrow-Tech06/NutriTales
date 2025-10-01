@@ -2,139 +2,91 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - App Name Placeholder</title>
-    <!-- Load Bootstrap 5.3 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" xintegrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- Load Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <meta name="google" content="notranslate">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,shrink-to-fit=no,viewport-fit=cover">  
+  
+
+    <title> Privacy Policy - NutriTales </title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+
+    <link href="docs.css" rel="stylesheet">
     
-    <style>
-        /* Custom CSS variables and styles */
-        :root {
-            --header-bg-color: #2ecc71; /* Emerald Green */
-            --body-bg: #fff; /* White background as requested */
-            --close-btn-bg: rgba(255, 255, 255, 0.3);
-            --content-max-w: 660px; /* Exact max-width */
-        }
-
-        body {
-            font-family: 'Inter', sans-serif; /* Maintaining the previous modern font style */
-            background-color: var(--body-bg);
-        }
-
-        /* Custom utility class to apply the max-width and center the content */
-        .content-max-w-container {
-            max-width: var(--content-max-w);
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* Styling for the sticky header */
-        .sticky-header {
-            background-color: var(--header-bg-color);
-            position: sticky;
-            top: 0;
-            z-index: 1020; /* Higher than Bootstrap navbar default (1030) if needed */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Styling for the close button */
-        .close-btn {
-            background-color: var(--close-btn-bg);
-            border: none;
-            color: #fff;
-            padding: 8px 12px;
-            border-radius: 8px; /* Slightly rounded corners */
-            transition: background-color 0.15s ease-in-out;
-            display: flex;
-            align-items: center;
-        }
-
-        .close-btn:hover {
-            background-color: rgba(255, 255, 255, 0.5); /* Lighter on hover */
-            color: #fff;
-        }
-
-        /* App icon placeholder style */
-        .app-icon-placeholder {
-            width: 24px;
-            height: 24px;
-            margin-right: 8px;
-            color: white;
-        }
-    </style>
 </head>
 <body>
 
-    <!-- STICKY HEADER -->
-    <header class="sticky-header" role="banner">
-        <div class="content-max-w-container px-3 py-3 d-flex align-items-center justify-content-between">
-            <!-- Left Side: App Icon, App Name and Tagline -->
-            <div class="d-flex flex-column align-items-start">
-                <div class="d-flex align-items-center">
-                    <!-- App Image/Icon Placeholder -->
-                    <svg class="app-icon-placeholder" fill="currentColor" viewBox="0 0 16 16">
-                      <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
-                      <path d="M7.646 1.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 2.707V10.5a.5.5 0 0 1-1 0V2.707L5.354 4.854a.5.5 0 1 1-.708-.708l3-3z"/>
-                    </svg>
-                    
-                    <h1 class="h5 mb-0 text-white fw-bold">
-                        App Name Placeholder
-                    </h1>
-                </div>
-                <p class="text-white opacity-75 fw-medium small mb-0 mt-0" style="margin-top: -3px;">
-                    by NOVY apps
-                </p>
+    <header class="app-header" id="mainHeader" role="banner">
+        <div class="content-max-w-container h-100 px-3 d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center">
+                <img 
+                    src="https://sparrow-tech06.github.io/NutriTales/assets/splash.png" 
+                    alt="App Logo" 
+                    class="app-icon shadow-sm" draggable="false">
+                
+                <h1 class="h5 mb-0 fw-bold header-title" id="headerTitle">
+                    NutriTales
+                </h1>
             </div>
 
-            <!-- Right Side: Close Button -->
             <nav role="navigation">
-                <a href="#" class="btn close-btn" aria-label="Close page">
-                    <i class="bi bi-x-lg me-1"></i>
-                    Close
-                </a>
+                <button class="close-btn" onclick="window.history.back()" aria-label="Close page">
+                    <i class="bi bi-x-lg"></i>
+                </button>
             </nav>
         </div>
     </header>
 
-    <!-- MAIN CONTENT AREA -->
-    <main class="content-max-w-container px-3 py-5" role="main">
+    <main class="content-max-w-container px-4 py-5" role="main">
         
-        <!-- Title & Date -->
-        <header class="text-center mb-5">
-            <p class="small text-muted mb-2">Updated: June 27, 2025</p>
-            <h2 class="display-6 fw-bolder text-dark">
-                Privacy Policy
-            </h2>
+        <header class="text-center mb-5" id="policyStart">
+            <h2 class="policy-title"> Privacy Policy </h2>
+            <p class="small text-muted my-3"> last Updated: June 27, 2025</p>
         </header>
 
-        <!-- Policy Body Content -->
-        <section class="space-y-4 text-secondary fs-6" style="line-height: 1.75;">
+        <section class="policy-text">
+            
             <p>
-                For individuals in the European Economic Area, United Kingdom, and Switzerland, you can <a href="#" class="text-success fw-bold text-decoration-none">read this version of our Privacy Policy</a>
-            </p>
-
-            <p>
-                We at **App Name OpCo, LLC** (together with our affiliates, “App Name,” “we,” “our,” or “us”) respect your privacy and are strongly committed to keeping secure any information we obtain from you or about you. This Privacy Policy describes our practices with respect to **Personal Data** that we collect from or about you when you use our website, applications, and services (collectively, “Services”).
-            </p>
-
-            <p>
-                This Privacy Policy does not apply to content that we process on behalf of customers of our business offerings, such as our API. Our use of that data is governed by our specific agreements with those customers.
-            </p>
-
-            <p>
-                We collect information about you in a few ways: directly from you, automatically through your use of our Services, and from third-party sources. The types of data collected include **Contact Information** (like your name and email), **Account Information** (like usage statistics and preferences), and **Technical Data** (like IP address and device information).
+                Welcome to **NutriTales** (the "App"), a service provided by NOVY apps. This Privacy Policy describes how we collect, use, and share information about you when you use our mobile application and related services (collectively, the "Services"). We are committed to protecting your privacy and ensuring you have a positive experience using our App.
             </p>
             
             <p>
                 We use the information we collect to provide, maintain, and improve our Services, to process transactions, to communicate with you about your use of the Services, and for security and fraud prevention purposes. We retain Personal Data for as long as necessary to fulfill the purposes for which we collected it, including for the purposes of satisfying any legal, accounting, or reporting requirements.
             </p>
+            
+            <p>
+                We may also share your information with third-party vendors and service providers that perform services for us or on our behalf, which may include payment processing, data analysis, email delivery, hosting services, and marketing assistance. These third parties are obligated to protect your information.
+            </p>
+            <p>
+                If you have questions or comments about this policy, you may contact us via email at privacy@nutritalesapp.com. This policy may be updated from time to time. We will notify you of any changes by posting the new Privacy Policy on this page.
+            </p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, natus. Ullam vitae eveniet ad eos magnam non accusamus sint iusto doloremque, reiciendis, voluptatibus ex dolorum eaque dicta aspernatur, cumque placeat?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, natus. Ullam vitae eveniet ad eos magnam non accusamus sint iusto doloremque, reiciendis, voluptatibus ex dolorum eaque dicta aspernatur, cumque placeat?
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, natus. Ullam vitae eveniet ad eos magnam non accusamus sint iusto doloremque, reiciendis, voluptatibus ex dolorum eaque dicta aspernatur, cumque placeat?
+            </p>
         </section>
 
     </main>
 
-    <!-- Load Bootstrap JS Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" xintegrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="docs.js"> </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+   <!-- SweetAlert2 cdn -->
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  
+   <!-- Website version checker & cache clear -->
+   <script src="https://sparrow-tech06.github.io/NutriTales/addon/version-check.js"> </script>
+   <!-- App version fetch & show update Popup -->
+   <script src="https://sparrow-tech06.github.io/NutriTales/addon/app-version-checker.js"> </script>
+
 </body>
 </html>
+
