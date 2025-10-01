@@ -1,1 +1,99 @@
 
+        /* CSS Root Variables for easy customization */
+        :root {
+            --header-bg-color: #2ecc71; /* Emerald Green */
+            --body-bg: #fff; /* White background */
+            --close-btn-bg: rgba(255, 255, 255, 0.3);
+            --close-btn-hover-bg: rgba(255, 255, 255, 0.5);
+            --content-max-w: 720px; /* Slightly wider content area for better readability */
+            --main-text-color: #4b5563;
+            --title-color: #1f2937;
+        }
+
+        /*********************************************/
+         * {
+           margin: 0 ;
+           padding: 0 ;
+           box-sizing: border-box ;
+           user-select: none ;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background-color: var(--body-bg);
+        }
+
+        /* Custom utility class to apply the max-width and center the content */
+        .content-max-w-container {
+            max-width: var(--content-max-w);
+            margin-left: auto;
+            margin-right: auto;
+        }
+/******************************************************************/
+        /* Fixed Header Styling - Slimmer look */
+        .app-header {
+            background-color: var(--header-bg-color);
+            position: sticky;
+            top: 0;
+            height: 60px; /* Slim height */
+            z-index: 1030;
+            transition: box-shadow 0.3s ease-in-out;
+            color: #fff; /* Ensure all default header text is white */
+        }
+
+        /* Dynamic shadow class added by JavaScript */
+        .app-header.scrolled {
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Styling for the close button */
+        .close-btn {
+            background-color: var(--close-btn-bg);
+            border: none;
+            color: #fff;
+            padding: 6px 10px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            transition: background-color 0.15s ease-in-out;
+            display: flex;
+            align-items: center;
+            line-height: 1; /* Fix vertical alignment */
+            font-size: 20px;
+        }
+
+        .close-btn:hover {
+            background-color: var(--close-btn-hover-bg);
+            color: #fff;
+        }
+
+    /****************** App Icon Styling ************************/
+        .app-icon {
+            width: 32px; /* Slightly larger icon */
+            height: 32px;
+            border-radius: 8px; /* Slightly larger radius */
+            margin-right: 12px;
+            object-fit: cover;
+        }
+
+        /* Title styling for modern look */
+        .policy-title {
+            font-size: 2.5rem; /* Equivalent to Bootstrap display-5 */
+            font-weight: 800; /* Extra bold */
+            color: var(--title-color);
+        }
+
+        /* Text styling */
+        .policy-text p {
+            margin-bottom: 1.5rem;
+            color: var(--main-text-color);
+            line-height: 1.75;
+            font-size: 1.05rem; /* Slightly larger base text */
+        }
+
+        /* Header Title alignment */
+        .header-title {
+            color: #fff !important; /* Force title text to be white */
+            transition: content 0.2s ease-in-out;
+        }
+
+    
