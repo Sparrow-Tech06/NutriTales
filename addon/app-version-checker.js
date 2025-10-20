@@ -1,4 +1,4 @@
-const webVersion = "13"; // Website-required version
+const webVersion = "14"; // Website-required version
 let isPopupShown = false; // 🔹 Track popup state
 
 function checkVersion() {
