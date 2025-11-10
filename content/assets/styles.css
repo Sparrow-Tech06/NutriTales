@@ -36,7 +36,7 @@
     .animal-header {
       background: var(--header);
       color: var(--text);
-      padding:1rem 1.5rem 1rem;
+      padding: 0.7rem 1rem 0.7rem;
       position: sticky ;
       top: 0;
       border-radius:0 0 30px 30px;
@@ -83,8 +83,8 @@
     .floating-btn {
       background:var(--accent);
       border-radius: 12px;
-      width: 50px;
-      height: 50px;
+      width: 40px;
+      height: 40px;
       display: flex;
       justify-content: center;
       align-items: center;
