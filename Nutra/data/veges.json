@@ -1,0 +1,17 @@
+[ 
+   { 
+      "name":"Spinach", 
+      "benefit":"Improves blood health and immunity", 
+      "img":"https://picsum.photos/600/400?1" 
+   }, 
+    {
+      "name":"Carrot", 
+      "benefit":"Good for eyes and skin", 
+      "img":"https://picsum.photos/600/400?2" 
+   }, 
+   { 
+     "name":"Tomato", 
+     "benefit":"Supports heart health", 
+     "img":"https://picsum.photos/600/400?3" 
+   } 
+]
