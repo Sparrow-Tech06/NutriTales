@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vegetables</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <style>
+    body{background:#f6f7f9}
+    .app{max-width:660px;margin:auto;min-height:100vh;background:#fff}
+    img{border-radius:14px;height:180px;object-fit:cover}
+  </style>
+</head>
+<body>
+<div id="app" class="app">
+<header class="p-3 border-bottom text-center fw-semibold">
+  <a href="index.html" class="text-decoration-none">←</a> Vegetables
+</header><main class="p-3" v-if="vegs.length">
+  <img :src="current.img" class="w-100 mb-3">
+  <h5>{{current.name}}</h5>
+  <p class="text-muted small">{{current.benefit}}</p>  <nav class="d-flex justify-content-between mt-4">
+    <button class="btn btn-outline-secondary btn-sm" @click="prev" :disabled="index===0">
+      <i class="bi bi-arrow-up"></i>
+    </button>
+    <button class="btn btn-outline-secondary btn-sm" @click="next" :disabled="index===vegs.length-1">
+      <i class="bi bi-arrow-down"></i>
+    </button>
+  </nav>
+</main>
+</div><script>
+Vue.createApp({
+  data(){return{vegs:[],index:0}},
+  computed:{current(){return this.vegs[this.index]}},
+  methods:{
+    next(){if(this.index<this.vegs.length-1)this.index++},
+    prev(){if(this.index>0)this.index--}
+  },
+  mounted(){
+    fetch('data/veges.json').then(r=>r.json()).then(d=>this.vegs=d)
+  }
+}).mount('#app')
+</script></body>
+</html>
