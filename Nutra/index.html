@@ -1,104 +1,45 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Veg Info App</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />  <!-- Bootstrap CSS -->  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Bootstrap Icons -->
+  <meta charset="UTF-8">
+  <title>Veg Knowledge</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
-  <!-- Vue JS CDN -->
-  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>  <style>
-    body{
-      background:#f6f7f9;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont;
-    }
-    .app{
-      max-width:660px;
-      margin:auto;
-      background:#fff;
-      min-height:100vh;
-    }
-    .card-option{
-      border:0;
-      border-radius:14px;
-      background:#f2f4f7;
-    }
-    .veg-img{
-      width:100%;
-      height:180px;
-      object-fit:cover;
-      border-radius:14px;
-    }
-  </style></head>
-<body><div id="app" class="app">  <!-- Header -->  <header class="p-3 border-bottom text-center fw-semibold">
-    Veg Knowledge
-  </header>  <!-- HOME PAGE -->  <main v-if="page==='home'" class="p-3">
-    <section class="row g-3">
-      <article class="col-6" v-for="item in homeOptions" :key="item.page">
-        <div class="card card-option p-3 text-center h-100" @click="page=item.page" role="button">
-          <i :class="item.icon" class="fs-2 mb-2"></i>
-          <div class="small fw-medium">{{item.title}}</div>
-        </div>
-      </article>
-    </section>
-  </main>  <!-- VEGES PAGE -->  <main v-if="page==='veges'" class="p-3">
-    <section>
-      <img :src="currentVeg.img" class="veg-img mb-3" alt="vegetable">
-      <h5 class="fw-semibold">{{currentVeg.name}}</h5>
-      <p class="text-muted small">{{currentVeg.benefit}}</p>
-    </section><nav class="d-flex justify-content-between mt-4">
-  <button class="btn btn-outline-secondary btn-sm" @click="prevVeg" :disabled="index===0">
-    <i class="bi bi-arrow-up"></i> Previous
-  </button>
-  <button class="btn btn-outline-secondary btn-sm" @click="nextVeg" :disabled="index===vegs.length-1">
-    Next <i class="bi bi-arrow-down"></i>
-  </button>
-</nav>
-
-  </main>  <!-- PLACEHOLDER PAGE -->  <main v-if="page!=='home' && page!=='veges'" class="p-3 text-center">
-    <p class="text-muted">This page is under construction</p>
-    <button class="btn btn-sm btn-outline-primary" @click="page='home'">Go Home</button>
-  </main></div><script>
-const { createApp } = Vue;
-
-createApp({
-  data(){
-    return{
-      page:'home',
-      index:0,
-      homeOptions:[
-        {title:'Vegetables', page:'veges', icon:'bi bi-leaf'},
-        {title:'Daily Tips', page:'tips', icon:'bi bi-lightbulb'},
-        {title:'Health', page:'health', icon:'bi bi-heart'},
-        {title:'About', page:'about', icon:'bi bi-info-circle'}
-      ],
-      vegs:[
-        {
-          name:'Spinach',
-          benefit:'Improves blood health and boosts immunity.',
-          img:'https://picsum.photos/600/400?veg1'
-        },
-        {
-          name:'Carrot',
-          benefit:'Good for eyesight and skin health.',
-          img:'https://picsum.photos/600/400?veg2'
-        },
-        {
-          name:'Tomato',
-          benefit:'Supports heart health and digestion.',
-          img:'https://picsum.photos/600/400?veg3'
-        }
-      ]
-    }
-  },
-  computed:{
-    currentVeg(){
-      return this.vegs[this.index]
-    }
-  },
-  methods:{
-    nextVeg(){ if(this.index < this.vegs.length-1) this.index++ },
-    prevVeg(){ if(this.index > 0) this.index-- }
-  }
-}).mount('#app')
-</script></body>
-                                   </html>
+  <style>
+    body{background:#f6f7f9}
+    .app{max-width:660px;margin:auto;min-height:100vh;background:#fff}
+    .card-option{border:0;border-radius:14px;background:#f2f4f7}
+  </style>
+</head>
+<body>
+<div class="app">
+<header class="p-3 border-bottom text-center fw-semibold">Veg Knowledge</header><main class="p-3">
+<section class="row g-3">
+  <article class="col-6">
+    <a href="veges.html" class="text-decoration-none text-dark">
+      <div class="card card-option p-3 text-center">
+        <i class="bi bi-leaf fs-2"></i>
+        <div class="small fw-medium mt-1">Vegetables</div>
+      </div>
+    </a>
+  </article>  <article class="col-6">
+    <a href="tips.html" class="text-decoration-none text-dark">
+      <div class="card card-option p-3 text-center">
+        <i class="bi bi-lightbulb fs-2"></i>
+        <div class="small fw-medium mt-1">Daily Tips</div>
+      </div>
+    </a>
+  </article>  <article class="col-6">
+    <a href="about.html" class="text-decoration-none text-dark">
+      <div class="card card-option p-3 text-center">
+        <i class="bi bi-info-circle fs-2"></i>
+        <div class="small fw-medium mt-1">About</div>
+      </div>
+    </a>
+  </article>
+</section>
+</main>
+</div>
+</body>
+</html>
