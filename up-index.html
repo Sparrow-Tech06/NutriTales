@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Opinion</title>
+
+<!-- Bootstrap -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Icons -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+<!-- Swiper -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+<!-- Animate (micro motion) -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+<style>
+body{
+  background:#fff;
+  font-family: system-ui, -apple-system, sans-serif;
+}
+main{
+  max-width:660px;
+  margin:auto;
+}
+
+/* HEADER */
+header{
+  padding:14px 16px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+}
+.left-head{
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+.app-name{
+  font-weight:600;
+  font-size:17px;
+}
+.icon-btn{
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  background:#f2f4f7;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#333;
+  text-decoration:none;
+}
+
+/* CAROUSEL */
+.carousel-card{
+  height:175px;
+  border-radius:24px;
+  overflow:hidden;
+}
+.carousel-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.swiper-slide{
+  transform:scale(.9);
+  transition:.45s ease;
+}
+.swiper-slide-active{
+  transform:scale(1);
+}
+.swiper-pagination{
+  position:static;
+  margin-top:10px;
+}
+.swiper-pagination-bullet{
+  width:8px;
+  height:8px;
+  transition:.3s;
+}
+.swiper-pagination-bullet-active{
+  width:18px;
+  border-radius:6px;
+}
+
+/* EXPLORE */
+section{
+  padding:10px 16px;
+}
+.topic-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:14px;
+}
+.topic-card{
+  border-radius:26px;
+  height:165px;
+  color:#fff;
+  text-decoration:none;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  transition:.3s;
+}
+.topic-card:active{
+  transform:scale(.97);
+}
+
+/* ICON BG */
+.icon-wrap{
+  width:64px;
+  height:64px;
+  border-radius:18px;
+  background:rgba(255,255,255,.25);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin-bottom:8px;
+}
+.icon-wrap img{
+  width:36px;
+  height:36px;
+}
+
+.topic-card span{
+  font-weight:600;
+}
+
+/* ARROW */
+.arrow-btn{
+  position:absolute;
+  bottom:12px;
+  right:12px;
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  background:rgba(255,255,255,.3);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* SIDEBAR */
+.offcanvas{
+  max-width:260px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="offcanvas offcanvas-start" tabindex="-1" id="menu">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title">Menu</h5>
+    <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <a href="#" class="d-block mb-3">Home</a>
+    <a href="#" class="d-block mb-3">My Opinion</a>
+    <a href="#" class="d-block mb-3">Rewards</a>
+    <a href="#" class="d-block">Settings</a>
+  </div>
+</div>
+
+<main id="app">
+
+<!-- HEADER -->
+<header>
+  <div class="left-head">
+    <button class="btn p-0" data-bs-toggle="offcanvas" data-bs-target="#menu">
+      <i class="bi bi-list fs-3"></i>
+    </button>
+    <div class="app-name">Daily Opinion</div>
+  </div>
+
+  <a href="notifications.html" class="icon-btn">
+    <i class="bi bi-bell"></i>
+  </a>
+</header>
+
+<!-- CAROUSEL -->
+<section>
+  <div class="swiper mySwiper animate__animated animate__fadeIn">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide" v-for="(img,i) in carousel" :key="i">
+        <div class="carousel-card">
+          <img :src="img">
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+</section>
+
+<!-- EXPLORE -->
+<section>
+  <h5 class="fw-bold mb-1">Explore Topics</h5>
+  <small class="text-muted">Select a category to start</small>
+
+  <div class="topic-grid mt-3">
+    <a v-for="(t,i) in topics" :key="i"
+       class="topic-card"
+       :href="t.link"
+       :style="{background:t.bg}">
+      <div class="icon-wrap">
+        <img :src="t.icon">
+      </div>
+      <span>{{t.title}}</span>
+      <div class="arrow-btn">
+        <i class="bi bi-arrow-right"></i>
+      </div>
+    </a>
+  </div>
+</section>
+
+</main>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@3/dist/vue.global.prod.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+Vue.createApp({
+  data(){
+    return{
+      carousel:[
+        "https://picsum.photos/800/400?101",
+        "https://picsum.photos/800/400?102",
+        "https://picsum.photos/800/400?103"
+      ],
+      topics:[
+        {title:"Cricket",link:"cricket.html",
+         bg:"linear-gradient(135deg,#ff416c,#ff4b2b)",
+         icon:"https://img.icons8.com/color/96/cricket.png"},
+        {title:"Political",link:"political.html",
+         bg:"linear-gradient(135deg,#11998e,#38ef7d)",
+         icon:"https://img.icons8.com/color/96/parliament.png"},
+        {title:"Stocks",link:"stocks.html",
+         bg:"linear-gradient(135deg,#667eea,#764ba2)",
+         icon:"https://img.icons8.com/color/96/combo-chart.png"},
+        {title:"Movies",link:"movies.html",
+         bg:"linear-gradient(135deg,#ff9966,#ff5e62)",
+         icon:"https://img.icons8.com/color/96/movie-projector.png"}
+      ]
+    }
+  },
+  mounted(){
+    new Swiper(".mySwiper",{
+      autoplay:{delay:3000},
+      pagination:{el:".swiper-pagination",clickable:true},
+      slidesPerView:1.1,
+      centeredSlides:true,
+      spaceBetween:14
+    });
+  }
+}).mount("#app");
+</script>
+
+</body>
+</html>
